@@ -1,0 +1,114 @@
+/* ============================================================
+   GRAPE — consultation (CTA + form) and footer
+   ============================================================ */
+
+/* ---------------- Consultation ---------------- */
+.consult { background: var(--black); color: var(--white); position: relative; overflow: hidden; }
+.consult .eyebrow { color: var(--gray-on-dark); }
+.consult .eyebrow::after, .consult .eyebrow::before { background: rgba(255,255,255,0.3); }
+
+/* soft neutral atmosphere */
+.consult__glow {
+  position: absolute; width: 900px; height: 900px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.06), transparent 65%);
+  filter: blur(40px); top: -260px; right: -200px; pointer-events: none;
+}
+.consult__glow.g2 { left: -240px; right: auto; top: auto; bottom: -300px; width: 760px; height: 760px;
+  background: radial-gradient(circle, rgba(255,255,255,0.04), transparent 65%); }
+
+.consult__inner { position: relative; z-index: 1; }
+.consult__head { max-width: 720px; margin: 0 auto clamp(50px,6vw,80px); text-align: center; }
+.consult__head h2 { color: #fff; margin: 22px 0 16px; }
+.consult__head .lead { color: rgba(255,255,255,0.7); margin: 0 auto; max-width: 52ch; }
+
+.consult__grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(36px,5vw,72px); align-items: start; }
+@media (max-width: 880px) { .consult__grid { grid-template-columns: 1fr; gap: 48px; } }
+
+.col-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 20px; }
+
+/* contact cards */
+.cards { display: flex; flex-direction: column; gap: 13px; }
+.ccard {
+  display: flex; align-items: center; gap: 17px; padding: 20px 22px; border-radius: 14px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.13);
+  transition: transform 0.3s var(--ease), border-color 0.25s, background-color 0.25s, box-shadow 0.3s;
+}
+.ccard:hover { transform: translateY(-3px); }
+.ccard .ci { flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+.ccard svg { width: 22px; height: 22px; }
+.ccard .cm { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.ccard .cl { font-size: 0.66rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.55); font-weight: 500; }
+.ccard .cv { font-size: 1.05rem; font-weight: 500; word-break: break-word; }
+.ccard.wa .ci { background: rgba(37,211,102,0.14); color: var(--whatsapp); }
+.ccard.wa:hover { border-color: rgba(37,211,102,0.45); background: rgba(37,211,102,0.06); box-shadow: 0 14px 34px -16px rgba(37,211,102,0.5); }
+.ccard.em .ci { background: rgba(255,255,255,0.1); color: #fff; }
+.ccard.em:hover { border-color: rgba(255,255,255,0.45); background: rgba(255,255,255,0.05); box-shadow: 0 14px 34px -16px rgba(0,0,0,0.5); }
+.cnote { margin-top: 20px; font-size: 0.9rem; font-style: italic; line-height: 1.55; color: rgba(255,255,255,0.55); }
+
+/* form */
+.form-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+.form-head .col-label { margin: 0; }
+.progress-count { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(255,255,255,0.4); white-space: nowrap; transition: color 0.25s; }
+.progress-count.done { color: #fff; }
+.progress-bar { width: 100%; height: 2px; background: rgba(255,255,255,0.1); border-radius: 1px; margin-bottom: 26px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: var(--grad-warm-x); transition: width 0.4s var(--ease); }
+
+.form { display: flex; flex-direction: column; gap: 17px; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field label { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.72); font-weight: 500; display: inline-flex; gap: 6px; }
+.field .req { color: rgba(255,255,255,0.7); }
+.field input, .field textarea, .field select {
+  width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.16);
+  padding: 14px 16px; border-radius: 10px; color: #fff; font-family: var(--font);
+  font-size: 1rem; font-weight: 300; line-height: 1.4;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+.field input::placeholder, .field textarea::placeholder { color: rgba(255,255,255,0.38); }
+.field input:focus, .field textarea:focus, .field select:focus {
+  outline: none; border-color: rgba(255,255,255,0.65); box-shadow: 0 0 0 4px rgba(255,255,255,0.10); background: rgba(255,255,255,0.08);
+}
+.field textarea { resize: vertical; min-height: 120px; }
+.field select { appearance: none; -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' opacity='0.6'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat; background-position: right 16px center; background-size: 16px; padding-right: 44px; }
+.field select option { background: var(--night-2); color: #fff; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+@media (max-width: 520px) { .field-row { grid-template-columns: 1fr; } }
+
+.submit {
+  margin-top: 6px; width: 100%; padding: 16px 26px; border-radius: 999px; cursor: pointer;
+  background: var(--grad-warm); color: #fff; border: 0; font-family: var(--font);
+  font-size: 0.98rem; font-weight: 700; letter-spacing: 0.01em;
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  transition: transform 0.2s var(--ease), box-shadow 0.25s, background-color 0.2s;
+}
+.submit .arr { transition: transform 0.2s var(--ease); }
+.submit:hover { transform: translateY(-2px); box-shadow: 0 16px 36px -14px rgba(0,0,0,0.6); }
+.submit:hover .arr { transform: translateX(4px); }
+.submit[disabled] { opacity: 0.65; cursor: progress; }
+
+.form-error { display: none; margin-top: 12px; padding: 12px 14px; border-radius: 10px;
+  background: rgba(255,90,90,0.12); border: 1px solid rgba(255,90,90,0.3); color: #ffc2c2; font-size: 0.9rem; }
+.form-error.show { display: block; }
+
+.thanks { display: none; flex-direction: column; align-items: flex-start; gap: 14px; padding: 42px 30px;
+  border-radius: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.13); }
+.thanks.show { display: flex; }
+.thanks .chk { width: 46px; height: 46px; border-radius: 50%; background: var(--grad-cool); color: #fff;
+  display: flex; align-items: center; justify-content: center; }
+.thanks h3 { font-size: 1.5rem; font-weight: 800; color: #fff; }
+.thanks p { color: rgba(255,255,255,0.7); line-height: 1.55; }
+
+/* ---------------- Footer ---------------- */
+.site-footer { background: var(--black); color: rgba(255,255,255,0.6); padding: clamp(56px,7vw,90px) var(--pad) 44px; }
+.foot__top { max-width: var(--maxw); margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px;
+  padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+.foot__brand img { height: 34px; filter: brightness(0) invert(1); margin-bottom: 18px; }
+.foot__brand p { max-width: 34ch; font-size: 0.92rem; line-height: 1.55; color: rgba(255,255,255,0.55); }
+.foot__col h4 { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 16px; font-weight: 700; }
+.foot__col a, .foot__col span { display: block; font-size: 0.95rem; color: rgba(255,255,255,0.78); margin-bottom: 11px; transition: color 0.2s; }
+.foot__col a:hover { color: #fff; }
+.foot__bottom { max-width: var(--maxw); margin: 28px auto 0; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  font-size: 0.78rem; color: rgba(255,255,255,0.45); letter-spacing: 0.02em; }
+@media (max-width: 760px) { .foot__top { grid-template-columns: 1fr 1fr; } .foot__brand { grid-column: 1 / -1; } }
+@media (prefers-reduced-motion: reduce) { .consult__glow { display: none; } }

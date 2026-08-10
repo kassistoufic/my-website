@@ -1,0 +1,20 @@
+/* About — desktop only. The page's own layout is fluid; this widens the
+   type and copy measures and releases the 430px header lock at >=1024px. */
+@media (min-width:1024px){
+  .mbar{left:0;right:0;transform:none;width:100%;max-width:1280px;margin-inline:auto}
+  .beat__kick{font-size:13px;letter-spacing:.24em;justify-content:center}
+  /* the 01-04 story beats sit centred on desktop */
+  .hold__pin{align-items:center;padding-left:var(--gutter,80px);padding-right:var(--gutter,80px)}
+  .hold__copy{max-width:none;text-align:center}
+  .house__copy{left:0;right:0;max-width:none;text-align:center;padding:0 var(--gutter,80px)}
+  .beat--hero h1{font-size:clamp(88px,8vw,150px);line-height:.92;letter-spacing:-.04em}
+  .beat--hero p{font-size:clamp(20px,1.5vw,26px);max-width:34ch;margin-inline:auto}
+  .hold__copy h2,.house__copy h2{font-size:clamp(40px,3.2vw,60px);line-height:1.04;letter-spacing:-.025em;max-width:16ch;margin-inline:auto}
+  .hold__copy p,.house__copy p{font-size:clamp(18px,1.35vw,23px);line-height:1.45;max-width:46ch;margin-inline:auto}
+  .land__word{font-size:clamp(72px,6.4vw,120px)}
+  .land__sub{font-size:clamp(24px,1.9vw,34px)}
+  .land__trust{font-size:18px}
+  .land__cta{font-size:1rem;padding:16px 34px}
+  .land__footer{max-width:1280px;margin-inline:auto;padding-left:80px;padding-right:80px}
+  .land__nav a{font-size:15px}
+}
