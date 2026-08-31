@@ -386,7 +386,10 @@
     var em = document.getElementById('f-email');
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)) { err.textContent = 'Please enter a valid email address.'; err.classList.add('show'); em.focus(); return; }
     var action = form.getAttribute('action') || '';
-    var ok = function () { form.style.display = 'none'; thanks.classList.add('show'); };
+    var ok = function () {
+      form.style.display = 'none'; thanks.classList.add('show');
+      document.dispatchEvent(new CustomEvent('grape:lead'));
+    };
     var configured = /^https?:/i.test(action) && action.indexOf('YOUR_FORM_ID') === -1 && action.indexOf('PASTE_YOUR') === -1;
     if (configured) {
       btn.setAttribute('disabled', ''); btn.querySelector('span').textContent = 'Sending…';

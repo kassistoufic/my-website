@@ -32,3 +32,24 @@
   host.addEventListener('mousemove', onMove, {passive:true});
   host.addEventListener('mouseleave', onLeave, {passive:true});
 })();
+
+/* Phone dashboard: the screen is laid out at one fixed design size and scaled
+   uniformly to whatever size the phone frame ends up — on short laptop
+   viewports the frame shrinks, and fixed-px content used to overflow it. */
+(function(){
+  if (!window.matchMedia('(min-width:1024px)').matches) return;
+  var phone = document.querySelector('.hphone');
+  var scr = phone && phone.querySelector('.hphone__scr');
+  if (!scr) return;
+  var DW = 172, DH = 354, raf = 0;
+  function fit(){
+    raf = 0;
+    var w = phone.clientWidth - 10, h = phone.clientHeight - 10;
+    if (w <= 0 || h <= 0) return;
+    scr.style.setProperty('--hpz', Math.min(w / DW, h / DH).toFixed(4));
+  }
+  function queue(){ if (!raf) raf = requestAnimationFrame(fit); }
+  fit();
+  addEventListener('resize', queue, {passive:true});
+  if (window.ResizeObserver) new ResizeObserver(queue).observe(phone);
+})();

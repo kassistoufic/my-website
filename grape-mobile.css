@@ -8,6 +8,10 @@
 html, body { background: #151314; }
 body { color: var(--white); }
 
+/* Vertical swipe must work wherever the finger lands — cards, images and SVGs
+   never swallow the page scroll gesture. */
+image-slot, .scard, .scard *, .cj__card, .cj__card *, img, svg, video { touch-action: pan-y pinch-zoom; }
+
 /* Dark-surface type system — brand black & white */
 :root {
   --font-mono: var(--font-grotesk);

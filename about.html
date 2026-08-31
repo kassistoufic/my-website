@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5FNWCN79');</script>
+  <!-- End Google Tag Manager -->
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Grape — About us</title>
@@ -472,8 +480,17 @@
 </style>
 <link rel="stylesheet" href="grape-desktop.css?v=1786039195381">
 <link rel="stylesheet" href="grape-about-desktop.css?v=1786039195381">
+  <script src="grape-events.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FNWCN79"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
 <script>if('scrollRestoration' in history){history.scrollRestoration='manual';}addEventListener('load',function(){window.scrollTo(0,0);});</script>
 <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="gthumb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ED173D"/><stop offset=".5" stop-color="#F49173"/><stop offset="1" stop-color="#F1B528"/></linearGradient></defs><rect width="100" height="100" rx="22" fill="url(#gthumb)"/><g fill="#fff"><path d="M45 31 A19 19 0 0 0 45 69 Z"/><circle cx="61" cy="50" r="11"/></g></svg></template>
 
@@ -938,6 +955,8 @@
     const night = smooth(clamp((afterHouse-0.04)/0.5,0,1));
     docEl.style.setProperty('--bg', mix(PAPER,NIGHT,night));
     docEl.style.setProperty('--fg', mix(INK,WHITE,night));
+    /* header inverts to ink while the page is still on paper, back to white once it turns night */
+    docEl.classList.toggle('on-light', night < 0.5);
 
     /* progress hairline */
     progEl.style.width=(p*100).toFixed(2)+'%';
