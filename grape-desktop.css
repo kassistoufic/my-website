@@ -56,8 +56,8 @@
   .msol__eyebrow{font-size:var(--dt-label);letter-spacing:.12em}
   .msol__grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;align-items:stretch;flex:1 1 auto;min-height:0}
   .scard{min-height:0}
-  .scard__media{aspect-ratio:auto;flex:0 1 auto;height:44%;min-height:88px}
-  .scard__body{flex:1 1 auto;min-height:0;justify-content:flex-start;overflow:visible}
+  .scard__media{aspect-ratio:auto;flex:1 1 auto;height:auto;min-height:60px}
+  .scard__body{flex:0 0 auto;min-height:0;justify-content:flex-start;overflow:visible}
   .scard__sentence{display:block;-webkit-line-clamp:none;overflow:visible;flex:0 0 auto}
   .scard__title{flex:0 0 auto}
   .msol__cta{margin-top:clamp(16px,2.4vh,28px);flex:0 0 auto}
@@ -99,7 +99,7 @@
   :root{--gutter:52px;--dt-rhythm:150px;--container-max:920px}
   .mbar{max-width:920px}
   .msol__grid{gap:20px}
-  .scard__media{height:40%;min-height:78px}
+  .scard__media{min-height:52px}
   .scard__body{padding:15px 16px 17px}
   .scard__title{font-size:1.02rem;letter-spacing:-.01em}
   .scard__sentence{font-size:14px;line-height:1.42;margin-top:6px}
