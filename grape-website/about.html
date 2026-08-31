@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5FNWCN79');</script>
+  <!-- End Google Tag Manager -->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grape — About us</title>
+<meta name="description" content="Grape creates intelligent living systems for modern homes across the MENA region — comfort, energy, safety, and control, unified in one seamless experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#231F20;
+    --paper:#FAFAF8;
+    --night:#121011;
+    --g1:#ED173D; --g2:#F49173; --g3:#F1B528;
+    --font:var(--font-grotesk);
+    --font-grotesk:"Aktiv Grotesk Ex","Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --mono:'JetBrains Mono',monospace;
+    --black:#231F20; --white:#FFFFFF; --white-soft:#F5F5F4;
+    --gray-on-dark:rgba(255,255,255,0.62);
+    --grad-warm:linear-gradient(100deg,#ED173D 4%,#F49173 52%,#F1B528 96%);
+    --whatsapp:#25D366;
+    --ease:cubic-bezier(0.22,0.61,0.36,1);
+    --ease-out:cubic-bezier(0.16,1,0.3,1);
+    --fg:#231F20;            /* live-updated by JS */
+    --bg:#FAFAF8;            /* live-updated by JS */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:auto}
+  body{
+    background:var(--bg);
+    font-family:var(--font);
+    font-stretch:112%;
+    color:var(--fg);
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  a:hover{opacity:.9}
+
+  /* ---------- scroll progress hairline ---------- */
+  .prog{position:fixed;left:0;top:0;height:2px;width:0%;background:var(--grad-warm);z-index:60;pointer-events:none}
+
+  /* ---------- top bar (identical to Home / Services) ---------- */
+  .mbar{position:fixed; inset:0 0 auto 0; z-index:80; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; padding-top:max(46px, calc(env(safe-area-inset-top) + 11px));}
+  .mbar__scrim{position:absolute; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(180deg, rgba(16,11,14,0.6) 0%, rgba(16,11,14,0.26) 56%, transparent 100%); transition:background .4s var(--ease);}
+  .mbar.condensed .mbar__scrim{background:linear-gradient(180deg, rgba(16,11,14,0.86) 0%, rgba(16,11,14,0.55) 62%, rgba(16,11,14,0.12) 100%);}
+  .mbar .mbar-logo{display:inline-flex; flex-direction:column; align-items:center; gap:3px; line-height:0; flex:0 0 auto;}
+  .mbar .mbar-logo img{width:auto; display:block; filter:brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,0.4));}
+  .mbar .mbar-logo .mbar-logo__mark{height:11px;}
+  .mbar .mbar-logo .mbar-logo__word{height:14px;}
+  .mbar__pills{display:flex; align-items:center; gap:8px; flex:0 0 auto;}
+  .mbar-cta{flex:0 0 auto; font-size:0.6rem; font-weight:500; letter-spacing:0.04em; color:rgba(255,255,255,0.92); padding:0.5em 0.85em; border:1px solid rgba(255,255,255,0.2); border-radius:999px; background:rgba(216,216,224,0.15); -webkit-backdrop-filter:blur(10px) saturate(1.1); backdrop-filter:blur(10px) saturate(1.1); text-shadow:0 1px 3px rgba(0,0,0,0.45); white-space:nowrap; text-decoration:none; display:inline-flex; align-items:center; gap:0.42em; transition:background-color .25s, color .25s, border-color .25s, transform .15s;}
+  .mbar-cta--book{background:rgba(255,255,255,0.17);}
+  .mbar-cta .dotmark{width:5px; height:5px; border-radius:999px 999px 0 0; background:var(--grad-warm); display:inline-block;}
+  .mbar-cta:hover{background:rgba(234,234,239,0.26); border-color:rgba(255,255,255,0.4);}
+  .mbar-cta:active{transform:scale(0.96); background:rgba(255,255,255,0.92); color:var(--ink); border-color:transparent; text-shadow:none;}
+  @media (max-width:380px){ .mbar-cta{font-size:0.55rem; padding:0.5em 0.72em; letter-spacing:0.02em;} .mbar__pills{gap:6px;} }
+  @media (min-width:760px){ .mbar{left:50%; right:auto; transform:translateX(-50%); width:430px; max-width:430px;} }
+
+  /* ---------- fixed stage (the shapes) ---------- */
+  .stage{position:fixed; inset:0; z-index:1; pointer-events:none; overflow:hidden;}
+  .shape{
+    position:absolute; left:0; top:0;
+    width:min(19vw,92px); height:min(19vw,92px);
+    will-change:transform,opacity;
+  }
+  .shape svg{width:100%; height:100%; overflow:visible; display:block}
+  .shape .solid{fill:var(--fg); opacity:var(--sop,1); transition:fill .3s linear}
+  .shape .grad{opacity:var(--gop,0)}
+
+  /* ---------- scroll beats ---------- */
+  main{position:relative; z-index:2}
+  .beat{
+    min-height:100svh;
+    display:flex; flex-direction:column; justify-content:flex-end;
+    padding:0 22px 12svh;
+  }
+  .beat--hero{position:relative; justify-content:center; align-items:flex-start; padding-bottom:0; min-height:104svh}
+  .beat__kick{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--mono); font-size:.58rem; letter-spacing:.24em; text-transform:uppercase;
+    opacity:.6; margin-bottom:14px;
+  }
+  .beat__kick::before{content:""; width:18px; height:2px; background:var(--grad-warm); flex:0 0 auto}
+  .beat h1,.beat h2,.hold__copy h2{
+    font-weight:700; letter-spacing:-.02em; line-height:1.02; text-wrap:balance;
+    font-size:clamp(2.6rem,12vw,4.4rem);
+  }
+  .beat h2,.hold__copy h2{font-size:clamp(2.1rem,9.8vw,3.4rem)}
+  .beat p,.hold__copy p{
+    font-weight:300; line-height:1.55; font-size:clamp(.95rem,3.9vw,1.08rem);
+    max-width:34ch; margin-top:16px; opacity:.82; text-wrap:pretty;
+  }
+  /* ===== pinned "stop" sections (beats 01 & 04) — same held-still feel as the house ===== */
+  .hold{position:relative; height:230svh}
+  .hold__pin{position:sticky; top:0; height:100svh; overflow:hidden;
+    display:flex; flex-direction:column; justify-content:flex-end; padding:0 22px 12svh}
+  .hold__copy{position:relative; z-index:3; max-width:38ch; width:100%}
+  @media (max-height:680px){ .hold{height:210svh} .hold__pin{padding-bottom:8svh} }
+  .gword{font-style:normal; background:var(--grad-warm); -webkit-background-clip:text; background-clip:text; color:transparent}
+
+  /* staggered reveal */
+  .reveal>*{opacity:0; transform:translateY(24px); filter:blur(5px);
+    transition:opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1), filter .7s ease}
+  .reveal.on>*{opacity:1; transform:none; filter:none}
+  .reveal.on>*:nth-child(2){transition-delay:.09s}
+  .reveal.on>*:nth-child(3){transition-delay:.18s}
+  .reveal.on>*:nth-child(4){transition-delay:.27s}
+  .reveal.on>*:nth-child(5){transition-delay:.36s}
+
+  /* how-we-work steps */
+  .steps{list-style:none; margin-top:22px; max-width:34ch; width:100%}
+  .steps li{display:flex; align-items:center; gap:14px; padding:12px 0;
+    border-top:1px solid color-mix(in srgb, var(--fg) 15%, transparent)}
+  .steps li:last-child{border-bottom:1px solid color-mix(in srgb, var(--fg) 15%, transparent)}
+  .steps .n{font-family:var(--mono); font-size:.55rem; letter-spacing:.2em; opacity:.5; flex:0 0 auto}
+  .steps .s{font-weight:500; font-size:clamp(.92rem,3.8vw,1rem); opacity:.92}
+
+  .scrollhint{
+    position:absolute; bottom:26px; left:22px;
+    display:flex; align-items:center; gap:9px;
+    font-family:var(--mono); font-size:.56rem; letter-spacing:.22em; text-transform:uppercase; opacity:.5;
+  }
+  .scrollhint i{
+    width:1.5px; height:26px; background:currentColor; display:block;
+    animation:hint 1.8s ease-in-out infinite; transform-origin:top;
+  }
+  @keyframes hint{0%,100%{transform:scaleY(.4);opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+  /* ============ THE HOUSE — pinned centerpiece ============ */
+  .house{position:relative; height:460svh}
+  .house__pin{
+    position:sticky; top:0; height:100svh; overflow:hidden;
+  }
+  .house__pin::before{content:"";position:absolute;inset:-8%;z-index:0;pointer-events:none;
+    background:radial-gradient(ellipse 74% 50% at 50% 46%, rgba(230,179,110,.30), rgba(230,179,110,0) 70%);
+    opacity:0;transition:opacity 1.4s var(--ease)}
+  .house__pin.alive::before{opacity:.62}
+
+  /* the shared villa (same house) — state layers crossfaded by data-state on #houseWrap */
+  .v-node{opacity:0;transition:opacity .55s var(--ease) calc(var(--i)*.12s)}
+  [data-state="systems"] .v-node,[data-state="pulse"] .v-node,[data-state="alive"] .v-node{opacity:1}
+  .v-halo{transition:opacity .9s var(--ease)}
+  [data-state="alive"] .v-halo{opacity:0 !important}
+  [data-state="systems"] .v-halo,[data-state="pulse"] .v-halo{animation:haloSpin 14s linear infinite}
+  @keyframes haloSpin{to{stroke-dashoffset:-60}}
+  .v-pulse{opacity:0;transition:opacity .8s var(--ease)}
+  [data-state="pulse"] .v-pulse{opacity:.85}
+  [data-state="alive"] .v-pulse{opacity:.4}
+  [data-state="pulse"] #vPulse,[data-state="alive"] #vPulse{stroke-dasharray:24 470;animation:pulseTravel 2.4s linear infinite}
+  @keyframes pulseTravel{to{stroke-dashoffset:-494}}
+  .v-glow{opacity:0;transition:opacity 1.6s var(--ease)}
+  [data-state="alive"] .v-glow{opacity:1}
+  .v-led{opacity:0;transition:opacity .4s var(--ease) calc(.35s + var(--i)*.14s)}
+  [data-state="alive"] .v-led{opacity:1}
+  .v-core{opacity:0;transition:opacity .9s var(--ease) .2s}
+  [data-state="alive"] .v-core{opacity:1}
+  [data-state="alive"] .v-coreRing{animation:coreBreath 3.6s ease-in-out infinite}
+  @keyframes coreBreath{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.18);opacity:.45}}
+  .v-coreRing{transform-box:fill-box;transform-origin:center}
+  .v-curtain{transform-box:fill-box;transform-origin:top center;animation:curtainSway 7s ease-in-out infinite}
+  @keyframes curtainSway{0%,100%{transform:rotate(0) skewX(0)}50%{transform:rotate(1.4deg) skewX(1.6deg)}}
+  .v-canopy{transform-box:fill-box;transform-origin:bottom center;animation:treeSway 9s ease-in-out infinite}
+  .v-canopy.b{animation-duration:11s;animation-delay:-3s}
+  @keyframes treeSway{0%,100%{transform:rotate(-.7deg)}50%{transform:rotate(.7deg)}}
+  [data-state="alive"] .v-cone{animation:coneFlicker 5.5s ease-in-out infinite}
+  @keyframes coneFlicker{0%,100%{opacity:1}42%{opacity:.82}58%{opacity:.94}74%{opacity:.85}}
+  @media (prefers-reduced-motion:reduce){
+    .v-curtain,.v-canopy,[data-state="alive"] .v-cone,[data-state="systems"] .v-halo,[data-state="pulse"] .v-halo,[data-state="alive"] .v-coreRing,[data-state="pulse"] #vPulse,[data-state="alive"] #vPulse{animation:none}
+  }
+
+  /* house docked in a fixed UPPER band — text lives strictly below it, never overlapping */
+  .house__stage{
+    position:absolute; left:50%; top:calc(56px + env(safe-area-inset-top)); transform:translateX(-50%);
+    width:min(92vw,540px); height:42svh; z-index:2;
+  }
+  .house__stage svg{display:block; width:100%; height:100%; overflow:visible}
+
+  /* text beats — pinned in the clear band BELOW the house, never over it */
+  .house__copy{
+    position:absolute; left:22px; right:22px; bottom:8svh; z-index:3;
+    opacity:0; transform:translateY(22px); will-change:opacity,transform; pointer-events:none;
+    max-width:36ch;
+  }
+  .house__copy .beat__kick{margin-bottom:12px}
+  .house__copy h2{
+    font-weight:700; letter-spacing:-.02em; line-height:1.04; text-wrap:balance;
+    font-size:clamp(2.1rem,9.8vw,3.4rem);
+  }
+  .house__copy p{
+    font-weight:300; line-height:1.55; font-size:clamp(.95rem,3.9vw,1.08rem);
+    max-width:34ch; margin-top:14px; opacity:.82; text-wrap:pretty;
+  }
+
+  /* the "internet · offline" wire, shown during beat 03 */
+  .wire{
+    position:absolute; left:50%; top:15svh; transform:translateX(-50%); z-index:3;
+    width:min(64vw,300px); height:22px; opacity:0; transition:opacity .5s ease; pointer-events:none;
+  }
+  .wire__line{
+    position:absolute; left:0; right:0; top:10px; height:1.5px;
+    background:var(--fg); transform-origin:left;
+  }
+  .wire.show .wire__line{animation:wire 3.4s ease-in-out infinite}
+  @keyframes wire{
+    0%,28%{opacity:.8; clip-path:inset(0 0 0 0)}
+    34%{opacity:.8; clip-path:inset(0 38% 0 38%)}
+    38%,86%{opacity:.18; clip-path:inset(0 47% 0 47%)}
+    92%,100%{opacity:.8; clip-path:inset(0 0 0 0)}
+  }
+  .wire__lab{
+    position:absolute; left:50%; top:-14px; transform:translateX(-50%);
+    font-family:var(--mono); font-size:.53rem; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--fg); opacity:0;
+  }
+  .wire.show .wire__lab{animation:lab 3.4s ease-in-out infinite}
+  @keyframes lab{0%,30%{opacity:0}40%,84%{opacity:.65}92%,100%{opacity:0}}
+
+  /* ---------- landing / arrival ---------- */
+  .land{
+    position:relative; overflow:hidden;
+    min-height:110svh;
+    display:flex; flex-direction:column;
+    text-align:center;
+  }
+  /* warm ambient glow rising from the bottom edge — the home you just lit */
+  .land__glow{
+    position:absolute; left:50%; bottom:0; transform:translateX(-50%);
+    width:160%; height:64svh; pointer-events:none; z-index:0;
+    background:
+      radial-gradient(58% 100% at 50% 124%, rgba(244,145,90,.20), rgba(244,145,90,0) 70%),
+      radial-gradient(96% 100% at 50% 132%, rgba(237,23,61,.15), rgba(237,23,61,0) 72%),
+      radial-gradient(42% 78% at 50% 120%, rgba(241,181,40,.16), rgba(241,181,40,0) 70%);
+  }
+  /* faint lit-home silhouette, low behind the footer */
+  .land__house{
+    position:absolute; left:50%; bottom:8svh; transform:translateX(-50%);
+    width:min(94vw,540px); height:auto; pointer-events:none; z-index:0;
+  }
+  .land__stage{
+    position:relative; z-index:2; flex:1 1 auto;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:7svh 22px 4svh;
+  }
+  .land__spacer{position:relative; height:min(26vw,132px); width:100%; display:flex; align-items:center; justify-content:center}
+  .land__logoGlow{
+    position:absolute; width:min(68vw,280px); height:min(68vw,280px); border-radius:50%;
+    background:radial-gradient(circle, rgba(244,145,90,.26), rgba(237,23,61,.10) 44%, rgba(18,16,17,0) 70%);
+    filter:blur(4px); animation:landBreath 4.8s ease-in-out infinite; will-change:transform,opacity;
+  }
+  @keyframes landBreath{0%,100%{transform:scale(1);opacity:.75}50%{transform:scale(1.13);opacity:1}}
+  .land__word{font-weight:700; font-size:clamp(2.6rem,13vw,4.4rem); letter-spacing:-.01em; margin-top:20px; line-height:1}
+  .land__sub{font-weight:300; font-size:clamp(.98rem,4vw,1.12rem); opacity:.78; margin-top:12px}
+  .land__trust{font-weight:300; font-size:.82rem; letter-spacing:.01em; opacity:.5; margin-top:10px}
+  .land__cta{
+    display:inline-flex; align-items:center; gap:10px; margin-top:30px;
+    padding:16px 32px; border-radius:999px; border:0; cursor:pointer;
+    background:var(--grad-warm); color:#fff; text-decoration:none;
+    font-family:var(--font); font-stretch:112%; font-weight:700; font-size:1rem; letter-spacing:.01em;
+    box-shadow:0 16px 44px rgba(237,23,61,.34), inset 0 0 0 1px rgba(255,255,255,.10);
+    transition:transform .25s var(--ease), box-shadow .25s var(--ease);
+  }
+  .land__cta em{font-style:normal; transition:transform .3s ease}
+  .land__cta:hover{transform:translateY(-2px); box-shadow:0 22px 54px rgba(237,23,61,.44), inset 0 0 0 1px rgba(255,255,255,.12)}
+  .land__cta:active{transform:scale(.98)}
+  .land__cta:active em{transform:translateX(4px)}
+  .land__contacts{display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:20px}
+  .land__contact{
+    display:inline-flex; align-items:center; gap:9px; padding:11px 15px; border-radius:12px;
+    background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); color:#fff; text-decoration:none;
+    font-size:.9rem; transition:background-color .2s, border-color .2s;
+  }
+  .land__contact:hover{background:rgba(255,255,255,.09); border-color:rgba(255,255,255,.22)}
+  .land__contact .ic{display:inline-flex; align-items:center; justify-content:center; width:16px; height:16px; flex:0 0 auto}
+  .land__contact .ic svg{width:16px; height:16px; display:block}
+  .land__contact.wa .ic{color:var(--whatsapp)}
+  .land__contact .lab{opacity:.92}
+  .land__how{display:block; width:fit-content; margin:20px auto 0; font-family:var(--mono); font-size:.56rem;
+    letter-spacing:.2em; text-transform:uppercase; opacity:.5; color:inherit;
+    text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px}
+  .land__footer{
+    position:relative; z-index:2; flex:0 0 auto;
+    margin:0 22px; padding:20px 0 calc(22px + env(safe-area-inset-bottom));
+    border-top:1px solid rgba(255,255,255,.10);
+    display:flex; flex-direction:column; align-items:center; gap:11px; text-align:center;
+  }
+  .land__slogan{font-weight:500; font-size:.92rem; color:rgba(255,255,255,.9)}
+  .land__social{display:flex; justify-content:center; gap:12px; margin-top:2px}
+  .land__soc{display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:999px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05); color:rgba(255,255,255,.82); transition:background-color .2s, border-color .2s, color .2s}
+  .land__soc:hover{background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.28); color:#fff}
+  .land__soc svg{width:16px; height:16px; display:block}
+  .land__nav{display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:9px;
+    font-family:var(--mono); font-size:.58rem; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.55)}
+  .land__nav a{color:inherit; text-decoration:none}
+  .land__nav a:hover{color:#fff}
+  .land__nav span{opacity:.35}
+  .land__copyline{font-family:var(--mono); font-size:.54rem; letter-spacing:.14em; text-transform:uppercase; opacity:.4}
+  @media (prefers-reduced-motion:reduce){ .land__logoGlow{animation:none} }
+
+  @media (prefers-reduced-motion:reduce){
+    .reveal>*{transition:none; opacity:1; transform:none; filter:none}
+    .wire.show .wire__line,.wire.show .wire__lab,.scrollhint i,.dot-core{animation:none}
+    .wire.show .wire__lab{opacity:.6}
+    .house__copy{transition:none}
+  }
+
+/* ---------- imported header burger (inherits --fg so it crossfades ink<->white) ---------- */
+  .bar__burger{ display:inline-flex; flex-direction:column; justify-content:center; gap:4px; width:42px; height:34px; padding:0 10px; border:0; background:transparent; cursor:pointer; pointer-events:auto; }
+  .bar__burger span{ display:block; height:1.6px; width:100%; background:var(--fg); border-radius:2px; transition:background .3s linear; }
+  .bar__burger:active{ transform:scale(0.96); }
+
+  /* ======================= imported: slide-in burger menu ======================= */
+/* ===== Header burger + slide-in menu ===== */
+.mbar-burger { display: inline-flex; flex-direction: column; justify-content: center; gap: 4px; width: 42px; height: 34px; padding: 0 10px; border: 0; background: transparent; cursor: pointer; flex: 0 0 auto; }
+.mbar-burger span { display: block; height: 1.6px; width: 100%; background: var(--grad-warm-x, linear-gradient(90deg,#ED173D,#F1B528)); border-radius: 2px; }
+.mbar-burger:active { transform: scale(0.96); }
+
+.navmenu { position: fixed; inset: 0; z-index: 210; }
+.navmenu[hidden] { display: none; }
+.navmenu__backdrop { position: absolute; inset: 0; background: rgba(10,10,10,0.55); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); opacity: 0; transition: opacity 0.35s var(--ease); }
+.navmenu.open .navmenu__backdrop { opacity: 1; }
+.navmenu__panel { position: absolute; top: 0; right: 0; bottom: 0; width: min(82vw, 330px);
+  background: linear-gradient(180deg, #262324, #151314); border-left: 1px solid rgba(255,255,255,0.12);
+  box-shadow: -20px 0 60px rgba(0,0,0,0.5);
+  padding: calc(26px + env(safe-area-inset-top)) 26px calc(28px + env(safe-area-inset-bottom));
+  display: flex; flex-direction: column; transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); }
+.navmenu.open .navmenu__panel { transform: translateX(0); }
+.navmenu__close { align-self: flex-end; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.navmenu__close:active { transform: scale(0.94); }
+.navmenu__links { display: flex; flex-direction: column; gap: 2px; margin-top: 24px; }
+.navmenu__links a { font-family: var(--font-grotesk,'Archivo',sans-serif); font-size: 1.85rem; font-weight: 700; color: #FFFFFF; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); transition: color 0.2s, padding-left 0.25s var(--ease); }
+.navmenu__links a:hover, .navmenu__links a:active { color: #fff; padding-left: 6px; }
+.navmenu__contact { margin-top: auto; display: flex; gap: 10px; }
+.navmenu__c { flex: 1; text-align: center; padding: 13px; border-radius: 12px; font-family: var(--font); font-weight: 500; font-size: 0.86rem; border: 1px solid rgba(255,255,255,0.14); color: #FFFFFF; transition: background-color 0.2s, border-color 0.2s; }
+.navmenu__c.wa { background: rgba(37,211,102,0.12); border-color: rgba(37,211,102,0.3); }
+.navmenu__c.em { background: transparent; border-color: rgba(255,255,255,0.35); }
+
+@media (min-width: 760px) { .navmenu__panel { right: 50%; margin-right: -215px; } }
+@media (prefers-reduced-motion: reduce) { .navmenu__backdrop, .navmenu__panel { transition: none; } }
+
+
+/* ===== Burger menu — premium redesign ===== */
+.navmenu__panel { width: min(86vw, 360px); background: linear-gradient(160deg, #242122 0%, #181617 55%, #121011 100%); overflow: hidden; padding-top: calc(24px + env(safe-area-inset-top)); }
+.navmenu__panel::before { content: ""; position: absolute; top: -70px; right: -90px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,0.07), transparent 68%); filter: blur(8px); pointer-events: none; z-index: 0; }
+.navmenu__panel::after { content: ""; position: absolute; inset: 0; background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxNDAnIGhlaWdodD0nMTQwJz48ZmlsdGVyIGlkPSdnJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC44NScgbnVtT2N0YXZlcz0nMicgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxNDAnIGhlaWdodD0nMTQwJyBmaWx0ZXI9J3VybCgjZyknLz48L3N2Zz4="); background-size: 140px 140px; opacity: 0.05; mix-blend-mode: overlay; pointer-events: none; z-index: 0; }
+.navmenu__panel > * { position: relative; z-index: 1; }
+.navmenu__top { display: flex; align-items: center; justify-content: space-between; }
+.navmenu__logo { display: inline-flex; flex-direction: column; gap: 3px; line-height: 0; }
+.navmenu__logo img { filter: brightness(0) invert(1); width: auto; display: block; }
+.navmenu__logo .navmenu__mark { height: 13px; }
+.navmenu__logo .navmenu__word { height: 15px; }
+.navmenu__close { color: #fff; border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.06); }
+.navmenu__links { display: flex; flex-direction: column; gap: 0; margin-top: 34px; }
+.navmenu__links a { display: flex; align-items: baseline; gap: 14px; font-family: var(--font-grotesk,'Archivo',sans-serif); font-size: 2rem; font-weight: 700; line-height: 1; color: #FFFFFF; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.08); opacity: 0; transform: translateX(16px); }
+.navmenu__links a .n { font-family: var(--font-grotesk,'Archivo',sans-serif); font-size: 0.64rem; letter-spacing: 0.1em; color: var(--gray-on-dark); min-width: 22px; }
+.navmenu__links a .t { position: relative; }
+.navmenu__links a .t::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -4px; height: 1.5px; background: rgba(255,255,255,0.7); transition: right 0.3s var(--ease); }
+.navmenu__links a:not(:last-child):hover .t, .navmenu__links a:not(:last-child):active .t { background: var(--grad-warm); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.navmenu__links a:hover .t::after, .navmenu__links a:active .t::after { right: 0; }
+.navmenu.open .navmenu__links a { opacity: 1; transform: none; transition: opacity 0.45s var(--ease-out), transform 0.45s var(--ease-out); }
+.navmenu.open .navmenu__links a:nth-child(1) { transition-delay: 0.08s; }
+.navmenu.open .navmenu__links a:nth-child(2) { transition-delay: 0.14s; }
+.navmenu.open .navmenu__links a:nth-child(3) { transition-delay: 0.20s; }
+.navmenu.open .navmenu__links a:nth-child(4) { transition-delay: 0.26s; }
+.navmenu.open .navmenu__links a:nth-child(5) { transition-delay: 0.32s; }
+.navmenu__label { display: block; font-family: var(--font-grotesk,'Archivo',sans-serif); font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 11px; }
+.navmenu__cbtns { display: flex; gap: 10px; }
+.navmenu__c.em { background: transparent; border-color: rgba(255,255,255,0.4); color: #fff; }
+@media (prefers-reduced-motion: reduce) { .navmenu__links a { opacity: 1; transform: none; } }
+
+
+/* ===== Burger menu — grape moment + refined contact ===== */
+.navmenu__panel::before { background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%); }
+.navmenu__foot { margin-top: auto; position: relative; z-index: 2; }
+.navmenu__line { display: block; font-family: var(--font); font-size: 0.98rem; color: rgba(255,255,255,0.86); padding: 5px 0; letter-spacing: 0.01em; transition: color 0.2s; }
+.navmenu__line:hover, .navmenu__line:active { color: #fff; }
+.navmenu__brand { display: block; margin-top: 15px; font-family: var(--font-grotesk,'Archivo',sans-serif); font-size: 1.15rem; font-weight: 500; line-height: 1.15; letter-spacing: -0.01em; text-transform: none; white-space: nowrap; color: #fff; }
+.navmenu__brand-x-unused { color: rgba(255,255,255,0.42); line-height: 1.6; max-width: 26ch; }
+.navmenu__grape { position: relative; z-index: 0; flex: 1 1 auto; display: flex; align-items: center; justify-content: center; min-height: 90px; pointer-events: none; opacity: 0.46; animation: grapeBreath 3s ease-in-out infinite; }
+.navmenu__grape svg { width: 150px; max-width: 46vw; height: auto; display: block; overflow: visible; }
+@keyframes grapeBreath { 0%,100% { transform: scale(1); opacity: 0.4; } 50% { transform: scale(1.05); opacity: 0.54; } }
+@media (prefers-reduced-motion: reduce) { .navmenu__grape { animation: none; } }
+
+
+/* ===== menu: no grape, taller links, icons ===== */
+.navmenu__grape { display: none !important; }
+.navmenu__links { flex: 0 0 auto; justify-content: flex-start; margin-top: 24px; margin-bottom: 30px; }
+.navmenu__links a { align-items: center; gap: 13px; padding: 13px 0; font-size: 1.85rem; }
+.navmenu__links a .n { transform: none; align-self: center; }
+.navmenu__links a .i { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: rgba(255,255,255,0.8); flex: 0 0 auto; }
+.navmenu__links a .i svg { width: 21px; height: 21px; }
+.navmenu__links a .t { flex: 1 1 auto; }
+.navmenu__line { display: flex; align-items: center; justify-content: flex-start; gap: 12px; }
+.navmenu__line .ci { display: inline-flex; align-items: center; color: var(--gray-on-dark); flex: 0 0 auto; order: -1; margin-right: 10px; }
+.navmenu__line .ci svg { width: 16px; height: 16px; }
+
+
+/* ===== menu: Book-a-visit CTA (last link) ===== */
+.navmenu__links a:last-child { margin-top: 22px; border-bottom: 0; padding: 14px 18px; border-radius: 14px; background: var(--grad-warm); box-shadow: 0 10px 28px rgba(0,0,0,0.35); gap: 13px; position: relative; }
+.navmenu__links a:last-child::before { content: ""; position: absolute; left: 2px; right: 2px; top: -12px; height: 1px; background: rgba(255,255,255,0.12); }
+.navmenu__links a:last-child .i { color: #fff; width: 26px; height: 26px; }
+.navmenu__links a:last-child .i svg { width: 22px; height: 22px; }
+.navmenu__links a:last-child .ct { display: flex; flex-direction: column; gap: 3px; }
+.navmenu__links a:last-child .t { font-size: 1.55rem; line-height: 1; color: #fff; }
+.navmenu__links a:last-child .t::after { display: none; }
+.navmenu__links a:last-child .sub { font-family: var(--font-grotesk,'Archivo',sans-serif); font-size: 0.56rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.8); }
+.navmenu__links a:last-child:hover, .navmenu__links a:last-child:active { color: #fff; filter: brightness(1.05); padding-left: 18px; }
+
+
+/* ===== menu polish: CTA + contact connection ===== */
+.navmenu__foot { margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.09); padding-top: 18px; }
+.navmenu__links { margin-bottom: 0; }
+.navmenu__links a:last-child { margin-top: 20px; padding: 12px 18px; }
+.navmenu__links a:last-child .t { font-size: 1.48rem; }
+.navmenu__links a:last-child .sub { letter-spacing: 0.1em; }
+.navmenu__line { gap: 9px; }
+.navmenu__line .ci { margin-right: 8px; }
+
+
+/* ===== menu micro-refinements ===== */
+.navmenu__links a:last-child::before { display: none; }
+.navmenu__foot { margin-top: auto; }
+.navmenu__panel { border-left-color: rgba(255,255,255,0.05); }
+/* secondary Support button — lighter than the gold Book CTA (for existing clients) */
+.navmenu__support{ display:flex; align-items:center; gap:13px; margin-top:10px; padding:12px 18px; border-radius:14px;
+  background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.28); color:#fff; text-decoration:none;
+  transition:background-color .2s var(--ease), border-color .2s var(--ease); }
+.navmenu__support:hover, .navmenu__support:active{ background:rgba(255,255,255,0.09); border-color:rgba(255,255,255,0.45); }
+.navmenu__support .i{ display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px; color:rgba(255,255,255,0.9); flex:0 0 auto; }
+.navmenu__support .i svg{ width:22px; height:22px; }
+.navmenu__support .ct{ display:flex; flex-direction:column; gap:3px; }
+.navmenu__support .t{ font-family:var(--font-grotesk,'Archivo',sans-serif); font-size:1.48rem; font-weight:700; line-height:1; color:#FFFFFF; }
+.navmenu__support .sub{ font-family:var(--font-grotesk,'Archivo',sans-serif); font-size:0.56rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.55); }
+
+  /* ======================= imported: contact bottom-sheet ======================= */
+.sheet { position: fixed; inset: 0; z-index: 200; }
+.sheet[hidden] { display: none; }
+.sheet__backdrop { position: absolute; inset: 0; background: rgba(10,10,10,0.6); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); opacity: 0; transition: opacity 0.35s var(--ease); }
+.sheet.open .sheet__backdrop { opacity: 1; }
+.sheet__panel { --em:#FFFFFF; position: absolute; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg, #262324, #161415); border-top: 1px solid rgba(255,255,255,0.14);
+  border-radius: 22px 22px 0 0; padding: 14px 18px calc(24px + env(safe-area-inset-bottom));
+  box-shadow: 0 -20px 60px rgba(0,0,0,0.5); transform: translateY(100%); transition: transform 0.4s cubic-bezier(0.32,0.72,0,1); }
+.sheet.open .sheet__panel { transform: translateY(0); }
+.sheet__grab { display: block; width: 40px; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.24); margin: 0 auto 14px; }
+.sheet__close { position: absolute; top: 12px; right: 14px; width: 32px; height: 32px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.7);
+  font-size: 1.15rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.sheet__close:active { transform: scale(0.95); }
+.sheet__title { font-family: var(--font-grotesk,'Archivo',sans-serif); font-weight: 700; font-size: 1.42rem; color: #fff; text-align: center; margin: 0 0 3px; }
+.sheet__sub { text-align: center; font-size: 0.82rem; color: rgba(255,255,255,0.55); margin: 0 0 16px; }
+.sheet__opts { display: flex; flex-direction: column; gap: 10px; }
+.sheet__opt { display: flex; align-items: center; gap: 14px; text-align: left; width: 100%; padding: 14px 15px; border-radius: 15px; cursor: pointer;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: var(--white); font-family: var(--font);
+  transition: transform 0.2s var(--ease), border-color 0.2s, background-color 0.2s; }
+.sheet__opt:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); }
+.sheet__opt:active { transform: scale(0.985); }
+.sheet__ic { flex: 0 0 auto; width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.06); }
+.sheet__ic svg { width: 21px; height: 21px; }
+.sheet__meta { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.sheet__meta b { font-size: 0.98rem; font-weight: 700; color: #fff; }
+.sheet__meta small { font-size: 0.8rem; color: rgba(255,255,255,0.58); }
+.sheet__go { flex: 0 0 auto; color: rgba(255,255,255,0.4); font-size: 1.05rem; transition: transform 0.2s var(--ease); }
+.sheet__opt:hover .sheet__go { transform: translateX(3px); }
+.sheet__opt.wa .sheet__ic { background: rgba(37,211,102,0.14); color: var(--whatsapp); }
+.sheet__opt.em .sheet__ic { background: rgba(255,255,255,0.1); color: #fff; }
+.sheet__opt.form .sheet__ic { background: rgba(255,255,255,0.08); color: #fff; }
+@media (min-width:760px){ .sheet__panel{ left:50%; right:auto; width:430px; max-width:430px; transform:translate(-50%,100%); } .sheet.open .sheet__panel{ transform:translate(-50%,0); } }
+@media (prefers-reduced-motion:reduce){ .sheet__backdrop,.sheet__panel{ transition:none; } }
+
+</style>
+<link rel="stylesheet" href="grape-desktop.css?v=1786039195381">
+<link rel="stylesheet" href="grape-about-desktop.css?v=1786039195381">
+  <script src="grape-events.js" defer></script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FNWCN79"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<script>if('scrollRestoration' in history){history.scrollRestoration='manual';}addEventListener('load',function(){window.scrollTo(0,0);});</script>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="gthumb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ED173D"/><stop offset=".5" stop-color="#F49173"/><stop offset="1" stop-color="#F1B528"/></linearGradient></defs><rect width="100" height="100" rx="22" fill="url(#gthumb)"/><g fill="#fff"><path d="M45 31 A19 19 0 0 0 45 69 Z"/><circle cx="61" cy="50" r="11"/></g></svg></template>
+
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<header class="mbar" id="mbar">
+  <div class="mbar__scrim" aria-hidden="true"></div>
+  <a class="mbar-logo" href="/" aria-label="Grape — home"><img class="mbar-logo__mark" src="assets/logo-mark.png" alt="" width="759" height="206"><img class="mbar-logo__word" src="assets/logo-word.png" alt="Grape" width="854" height="274"></a>
+  <nav class="dnav" style="display:none" aria-label="Primary desktop">
+    <a href="/">Home</a>
+    <a href="services.html">Our Solutions</a>
+    <a href="/#consult">How it works</a>
+    <a href="about.html" aria-current="page">About us</a>
+  </nav>
+  <nav class="mbar__pills" aria-label="Primary">
+    <button class="mbar-cta mbar-cta--book" type="button" data-open-sheet="" aria-haspopup="dialog" aria-controls="visitSheet"><span class="dotmark" aria-hidden="true"></span>Get in touch</button>
+    <button class="mbar-burger" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+<script>(function(){var m=document.getElementById('mbar');if(!m)return;var on=function(){m.classList.toggle('condensed',(window.scrollY||0)>8);};addEventListener('scroll',on,{passive:true});on();})();</script>
+
+<!-- fixed stage: the four logomark shapes -->
+<div class="stage" id="stage" aria-hidden="true">
+  <div class="shape" id="s1">
+    <svg viewBox="0 0 100 100">
+      <defs><linearGradient id="gw1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ED173D"/><stop offset=".55" stop-color="#F49173"/><stop offset="1" stop-color="#F1B528"/></linearGradient></defs>
+      <path class="solid" d="M62 4 A46 46 0 0 0 62 96 Z"/>
+      <path class="grad" fill="url(#gw1)" d="M62 4 A46 46 0 0 0 62 96 Z"/>
+    </svg>
+  </div>
+  <div class="shape" id="s2">
+    <svg viewBox="0 0 100 100">
+      <defs><linearGradient id="gw2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ED173D"/><stop offset=".55" stop-color="#F49173"/><stop offset="1" stop-color="#F1B528"/></linearGradient></defs>
+      <path class="solid" d="M62 4 A46 46 0 0 0 62 96 Z"/>
+      <path class="grad" fill="url(#gw2)" d="M62 4 A46 46 0 0 0 62 96 Z"/>
+    </svg>
+  </div>
+  <div class="shape" id="s3">
+    <svg viewBox="0 0 100 100">
+      <defs><linearGradient id="gw3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ED173D"/><stop offset=".55" stop-color="#F49173"/><stop offset="1" stop-color="#F1B528"/></linearGradient></defs>
+      <path class="solid" d="M38 4 A46 46 0 0 1 38 96 Z"/>
+      <path class="grad" fill="url(#gw3)" d="M38 4 A46 46 0 0 1 38 96 Z"/>
+    </svg>
+  </div>
+  <div class="shape" id="s4">
+    <svg viewBox="0 0 100 100">
+      <defs><linearGradient id="gw4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ED173D"/><stop offset=".55" stop-color="#F49173"/><stop offset="1" stop-color="#F1B528"/></linearGradient></defs>
+      <circle class="solid" cx="50" cy="50" r="46"/>
+      <circle class="grad" fill="url(#gw4)" cx="50" cy="50" r="46"/>
+    </svg>
+  </div>
+</div>
+
+<main>
+  <!-- 0 · hero -->
+  <section class="beat beat--hero" data-beat="0" data-screen-label="About — Hero">
+    <div class="reveal">
+      <div class="beat__kick">About Grape</div>
+      <h1>We are<br><em class="gword">Grape.</em></h1>
+      <p>Smart living — designed, installed, and cared for in the MENA region.</p>
+    </div>
+  </section>
+
+  <!-- 1 · what we do — PINNED STOP -->
+  <section class="hold" id="run01" data-screen-label="About — What we do">
+    <div class="hold__pin">
+      <div class="reveal hold__copy" id="copy1">
+        <div class="beat__kick">01 — What we do</div>
+        <h2>We connect your whole home.</h2>
+        <p>Lighting, climate, shading, energy, security, safety — designed, installed, and controlled as one system, from one app.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2+3 · THE HOUSE (pinned centerpiece) -->
+  <section class="house" id="houseRunway" data-screen-label="About — The house">
+    <div class="house__pin">
+
+      <!-- the two-storey cross-section, powered on by the four shapes -->
+      <figure class="house__stage" id="houseWrap" data-state="quiet" role="img" aria-label="Cutaway of a two-storey Grape home; the logomark switches every room on as one connected system">
+<svg viewBox="0 0 720 470" aria-hidden="true">
+  <defs>
+    <linearGradient id="vGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ED173D"></stop><stop offset=".55" stop-color="#F49173"></stop><stop offset="1" stop-color="#F1B528"></stop>
+    </linearGradient>
+    <linearGradient id="vCone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgba(255,214,150,.5)"></stop><stop offset="1" stop-color="rgba(255,214,150,0)"></stop>
+    </linearGradient>
+    <radialGradient id="vRoomG" cx=".5" cy=".9" r=".9">
+      <stop offset="0" stop-color="rgba(255,206,140,.4)"></stop><stop offset=".6" stop-color="rgba(230,150,90,.12)"></stop><stop offset="1" stop-color="rgba(230,150,90,0)"></stop>
+    </radialGradient>
+    <linearGradient id="vSpill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="rgba(255,206,140,.35)"></stop><stop offset="1" stop-color="rgba(255,206,140,0)"></stop>
+    </linearGradient>
+    <filter id="vBlur" x="-40%" y="-200%" width="180%" height="500%"><feGaussianBlur stdDeviation="5"></feGaussianBlur></filter>
+    <clipPath id="vGlass"><rect x="476" y="274" width="158" height="144"></rect></clipPath>
+  </defs>
+
+  <!-- ── landscaping, behind ── -->
+  <g class="v-back">
+    <path d="M664 430 V352" stroke="#231F20" stroke-width="3" opacity=".75" fill="none"></path>
+    <g class="v-canopy">
+      <ellipse cx="664" cy="326" rx="30" ry="36" fill="#E6E4DF"></ellipse>
+      <ellipse cx="650" cy="344" rx="18" ry="20" fill="#EBE9E4"></ellipse>
+      <ellipse cx="678" cy="346" rx="16" ry="18" fill="#E1DFD9"></ellipse>
+    </g>
+    <path d="M52 430 V386" stroke="#231F20" stroke-width="2.5" opacity=".7" fill="none"></path>
+    <g class="v-canopy b">
+      <ellipse cx="52" cy="372" rx="17" ry="20" fill="#E6E4DF"></ellipse>
+      <ellipse cx="43" cy="382" rx="10" ry="12" fill="#EBE9E4"></ellipse>
+    </g>
+    <rect x="70" y="416" width="44" height="14" rx="7" fill="#ECEAE5"></rect>
+  </g>
+
+  <!-- ── ground shadow ── -->
+  <ellipse cx="380" cy="431" rx="278" ry="8" fill="rgba(35,31,32,.10)" filter="url(#vBlur)"></ellipse>
+
+  <g class="v-house">
+    <!-- room volumes -->
+    <rect x="126" y="270" width="206" height="152" fill="#F3F2EF"></rect>
+    <rect x="336" y="270" width="134" height="152" fill="#F1F0EC"></rect>
+    <rect x="470" y="270" width="164" height="152" fill="#F4F3F0"></rect>
+    <rect x="90" y="158" width="238" height="104" fill="#F3F2EF"></rect>
+    <rect x="332" y="158" width="132" height="104" fill="#F1F0EC"></rect>
+    <!-- floor finishes -->
+    <rect x="126" y="418" width="508" height="4" fill="#E5E2DC"></rect>
+    <rect x="90" y="258" width="374" height="4" fill="#E5E2DC"></rect>
+
+    <!-- glazed rear facade of the pavilion (beyond the cut) -->
+    <g>
+      <rect x="476" y="274" width="158" height="144" fill="rgba(35,31,32,.045)" stroke="rgba(35,31,32,.5)" stroke-width="1.2"></rect>
+      <g clip-path="url(#vGlass)">
+        <polygon points="500,274 528,274 494,418 478,418" fill="#FFFFFF" opacity=".32"></polygon>
+        <polygon points="560,274 572,274 538,418 530,418" fill="#FFFFFF" opacity=".2"></polygon>
+      </g>
+      <path d="M528 274 V418 M580 274 V418" stroke="rgba(35,31,32,.5)" stroke-width="1.2" fill="none"></path>
+    </g>
+
+    <!-- ═ living ═ -->
+    <rect x="140" y="417" width="180" height="5" rx="2.5" fill="#E9E7E2"></rect>
+    <rect x="170" y="302" width="44" height="52" fill="#F7F6F3" stroke="#231F20" stroke-width="1.3"></rect>
+    <rect x="177" y="310" width="30" height="36" fill="#E7E5E0"></rect>
+    <rect x="222" y="312" width="26" height="32" fill="#F7F6F3" stroke="#231F20" stroke-width="1.2"></rect>
+    <g stroke="#231F20" fill="#E8E6E1">
+      <rect x="148" y="370" width="104" height="10" rx="4" stroke-width="1.3"></rect>
+      <rect x="148" y="392" width="104" height="18" rx="4" stroke-width="1.3"></rect>
+      <rect x="152" y="380" width="46" height="14" rx="4" fill="#F1EFEA" stroke-width="1.1"></rect>
+      <rect x="202" y="380" width="46" height="14" rx="4" fill="#F1EFEA" stroke-width="1.1"></rect>
+    </g>
+    <path d="M156 410 V422 M244 410 V422" stroke="#231F20" stroke-width="1.5" fill="none"></path>
+    <rect x="268" y="402" width="42" height="3" rx="1.5" fill="#231F20"></rect>
+    <path d="M289 405 V420" stroke="#231F20" stroke-width="1.5" fill="none"></path>
+    <rect x="280" y="420" width="18" height="2" rx="1" fill="#231F20"></rect>
+    <!-- arc lamp -->
+    <path d="M316 422 L316 374 Q316 352 294 352 L284 352" stroke="#231F20" stroke-width="2" fill="none"></path>
+    <rect x="308" y="420" width="16" height="2.5" rx="1.2" fill="#231F20"></rect>
+    <path d="M277 352 h14 l-3 10 h-8 Z" fill="#231F20"></path>
+
+    <!-- ═ dining ═ -->
+    <rect x="340" y="390" width="42" height="3.5" rx="1.5" fill="#231F20"></rect>
+    <path d="M346 393 V422 M376 393 V422" stroke="#231F20" stroke-width="1.6" fill="none"></path>
+    <ellipse cx="361" cy="388" rx="6" ry="2" fill="none" stroke="#231F20" stroke-width="1"></ellipse>
+    <path d="M352 270 V316" stroke="#231F20" stroke-width="1.3" fill="none"></path>
+    <path d="M345 316 a7 7 0 0 1 14 0 Z" fill="#231F20"></path>
+    <path d="M370 270 V324" stroke="#231F20" stroke-width="1.3" fill="none"></path>
+    <path d="M363 324 a7 7 0 0 1 14 0 Z" fill="#231F20"></path>
+    <!-- stair to the roof terrace -->
+    <path d="M386 422 V405 H395 V388 H404 V371 H413 V354 H422 V337 H431 V320 H440 V303 H449 V286 H458 V270 V422 Z" fill="#EAE8E3" stroke="#231F20" stroke-width="1.3"></path>
+
+    <!-- ═ glass pavilion lounge ═ -->
+    <g stroke="#231F20" fill="#ECEAE5">
+      <rect x="560" y="392" width="34" height="16" rx="4" stroke-width="1.2"></rect>
+      <rect x="588" y="372" width="8" height="36" rx="4" stroke-width="1.2"></rect>
+    </g>
+    <path d="M566 408 V422 M590 408 V422" stroke="#231F20" stroke-width="1.4" fill="none"></path>
+    <path d="M516 400 H544 M530 400 V422" stroke="#231F20" stroke-width="1.4" fill="none"></path>
+    <path d="M604 402 h22 l-3 20 h-16 Z" fill="#C9C6C0" stroke="#231F20" stroke-width="1.1"></path>
+    <g fill="#DFDCD6">
+      <ellipse cx="609" cy="390" rx="4" ry="12" transform="rotate(-18 609 390)"></ellipse>
+      <ellipse cx="615" cy="384" rx="4" ry="13"></ellipse>
+      <ellipse cx="621" cy="390" rx="4" ry="12" transform="rotate(18 621 390)"></ellipse>
+    </g>
+    <rect x="517" y="270" width="7" height="4" fill="#231F20"></rect>
+    <rect x="583" y="270" width="7" height="4" fill="#231F20"></rect>
+
+    <!-- ═ bedroom ═ -->
+    <rect x="140" y="259" width="120" height="3" rx="1.5" fill="#E9E7E2"></rect>
+    <rect x="108" y="214" width="120" height="20" rx="2" fill="#ECEAE5" stroke="#231F20" stroke-width="1.2"></rect>
+    <rect x="112" y="246" width="112" height="12" fill="#E8E6E1" stroke="#231F20" stroke-width="1.3"></rect>
+    <rect x="116" y="234" width="104" height="14" rx="3" fill="#F1EFEA" stroke="#231F20" stroke-width="1.2"></rect>
+    <rect x="170" y="236" width="48" height="12" rx="2" fill="#E6E4DE"></rect>
+    <rect x="120" y="224" width="22" height="9" rx="3" fill="#F7F6F3" stroke="#231F20" stroke-width="1.1"></rect>
+    <rect x="146" y="224" width="22" height="9" rx="3" fill="#F7F6F3" stroke="#231F20" stroke-width="1.1"></rect>
+    <path d="M118 258 V262 M218 258 V262" stroke="#231F20" stroke-width="1.4" fill="none"></path>
+    <rect x="238" y="246" width="20" height="16" fill="#ECEAE5" stroke="#231F20" stroke-width="1.2"></rect>
+    <path d="M248 238 V246" stroke="#231F20" stroke-width="1.3" fill="none"></path>
+    <path d="M244 238 h8 l-2 -6 h-4 Z" fill="#231F20"></path>
+    <!-- window + curtain -->
+    <rect x="272" y="176" width="44" height="52" fill="rgba(35,31,32,.05)" stroke="#231F20" stroke-width="1.2"></rect>
+    <path d="M294 176 V228" stroke="rgba(35,31,32,.5)" stroke-width="1.1" fill="none"></path>
+    <path class="v-curtain" d="M262 174 C266 192 258 210 263 228 L275 228 C270 210 278 192 274 174 Z" fill="#EDEBE7" stroke="#231F20" stroke-width=".9" opacity=".95"></path>
+
+    <!-- ═ reading nook ═ -->
+    <path d="M348 186 H432 M348 202 H432" stroke="#231F20" stroke-width="1.2" opacity=".45" fill="none"></path>
+    <g fill="#231F20">
+      <rect x="352" y="176" width="4" height="10" opacity=".7"></rect><rect x="358" y="178" width="3" height="8" opacity=".45"></rect>
+      <rect x="363" y="175" width="5" height="11" opacity=".55"></rect><rect x="370" y="178" width="3" height="8" opacity=".3"></rect>
+      <rect x="375" y="176" width="4" height="10" opacity=".6"></rect><rect x="382" y="178" width="3" height="8" opacity=".4"></rect>
+      <rect x="400" y="193" width="4" height="9" opacity=".55"></rect><rect x="406" y="194" width="3" height="8" opacity=".35"></rect>
+      <rect x="411" y="192" width="4" height="10" opacity=".6"></rect><rect x="418" y="194" width="3" height="8" opacity=".4"></rect>
+    </g>
+    <path d="M352 246 Q356 232 372 232 H404 Q414 232 414 244 V258 H352 Z" fill="#ECEAE5" stroke="#231F20" stroke-width="1.2"></path>
+    <path d="M358 258 V262 M408 258 V262" stroke="#231F20" stroke-width="1.4" fill="none"></path>
+    <path d="M436 206 V262" stroke="#231F20" stroke-width="1.3" fill="none"></path>
+    <rect x="429" y="194" width="14" height="14" rx="3" fill="#F1EFEA" stroke="#231F20" stroke-width="1.2"></rect>
+
+    <!-- ═ cut structure (poché) ═ -->
+    <g fill="#231F20">
+      <rect x="78" y="150" width="398" height="8"></rect>
+      <rect x="84" y="262" width="556" height="8"></rect>
+      <rect x="120" y="422" width="520" height="8"></rect>
+      <rect x="84" y="150" width="6" height="120"></rect>
+      <rect x="464" y="150" width="6" height="112"></rect>
+      <rect x="120" y="270" width="6" height="152"></rect>
+      <rect x="332" y="270" width="4" height="74"></rect>
+      <rect x="328" y="158" width="4" height="80"></rect>
+      <rect x="634" y="270" width="6" height="5"></rect>
+      <rect x="634" y="417" width="6" height="5"></rect>
+    </g>
+    <!-- glass in section (right facade) -->
+    <path d="M635.5 275 V417 M638.5 275 V417" stroke="#231F20" stroke-width="1" opacity=".8" fill="none"></path>
+
+    <!-- terrace: glass balustrade + planter -->
+    <rect x="478" y="243" width="150" height="19" fill="rgba(35,31,32,.04)"></rect>
+    <path d="M476 242 H632" stroke="#231F20" stroke-width="1.5" fill="none"></path>
+    <path d="M478 242 V262 M553 242 V262 M628 242 V262" stroke="#231F20" stroke-width="1.2" fill="none"></path>
+    <rect x="596" y="246" width="30" height="16" fill="#EFEDE9" stroke="#231F20" stroke-width="1.2"></rect>
+    <g fill="#DFDCD6">
+      <ellipse cx="603" cy="243" rx="5" ry="6"></ellipse><ellipse cx="611" cy="240" rx="5" ry="7"></ellipse><ellipse cx="619" cy="243" rx="5" ry="6"></ellipse>
+    </g>
+
+    <!-- ground datum + earth -->
+    <line x1="24" y1="430" x2="696" y2="430" stroke="#231F20" stroke-width="1.5" opacity=".85"></line>
+    <path d="M64 433l-11 11M112 433l-11 11M160 433l-11 11M208 433l-11 11M256 433l-11 11M304 433l-11 11M352 433l-11 11M400 433l-11 11M448 433l-11 11M496 433l-11 11M544 433l-11 11M592 433l-11 11M640 433l-11 11M685 433l-11 11" stroke="#231F20" stroke-width="1" opacity=".22" fill="none"></path>
+
+    <!-- ═══ STATE · alive: lamplight ═══ -->
+    <g class="v-glow">
+      <rect x="126" y="270" width="508" height="152" fill="url(#vRoomG)"></rect>
+      <rect x="90" y="158" width="374" height="104" fill="url(#vRoomG)"></rect>
+      <g fill="url(#vCone)">
+        <polygon class="v-cone" points="346,320 358,320 368,388 336,388"></polygon>
+        <polygon class="v-cone" points="364,328 376,328 388,388 352,388"></polygon>
+        <polygon class="v-cone" points="272,366 296,366 306,416 262,416"></polygon>
+        <polygon class="v-cone" points="429,210 443,210 452,260 420,260"></polygon>
+        <polygon class="v-cone" points="514,277 527,277 542,420 499,420"></polygon>
+        <polygon class="v-cone" points="580,277 593,277 608,420 565,420"></polygon>
+      </g>
+      <polygon points="640,290 692,428 640,428" fill="url(#vSpill)"></polygon>
+      <circle cx="334" cy="310" r="26" fill="url(#vRoomG)"></circle>
+    </g>
+
+    <!-- ═══ STATE · systems: isolated device points ═══ -->
+    <g class="v-sys">
+      <g class="v-node" style="--i:0" transform="translate(134 354)"><circle class="v-halo" r="7.5" fill="none" stroke="#231F20" stroke-width="1.1" stroke-dasharray="2 3" opacity=".7"></circle><circle r="3.8" fill="#FAFAF8" stroke="#231F20" stroke-width="1.3"></circle><circle r="1.3" fill="#231F20"></circle></g>
+      <g class="v-node" style="--i:1" transform="translate(272 172)"><circle class="v-halo" r="7.5" fill="none" stroke="#231F20" stroke-width="1.1" stroke-dasharray="2 3" opacity=".7"></circle><circle r="3.8" fill="#FAFAF8" stroke="#231F20" stroke-width="1.3"></circle><circle r="1.3" fill="#231F20"></circle></g>
+      <g class="v-node" style="--i:2" transform="translate(346 300)"><circle class="v-halo" r="7.5" fill="none" stroke="#231F20" stroke-width="1.1" stroke-dasharray="2 3" opacity=".7"></circle><circle r="3.8" fill="#FAFAF8" stroke="#231F20" stroke-width="1.3"></circle><circle r="1.3" fill="#231F20"></circle></g>
+      <g class="v-node" style="--i:3" transform="translate(361 284)"><circle class="v-halo" r="7.5" fill="none" stroke="#231F20" stroke-width="1.1" stroke-dasharray="2 3" opacity=".7"></circle><circle r="3.8" fill="#FAFAF8" stroke="#231F20" stroke-width="1.3"></circle><circle r="1.3" fill="#231F20"></circle></g>
+      <g class="v-node" style="--i:4" transform="translate(553 278)"><circle class="v-halo" r="7.5" fill="none" stroke="#231F20" stroke-width="1.1" stroke-dasharray="2 3" opacity=".7"></circle><circle r="3.8" fill="#FAFAF8" stroke="#231F20" stroke-width="1.3"></circle><circle r="1.3" fill="#231F20"></circle></g>
+      <g class="v-node" style="--i:5" transform="translate(624 344)"><circle class="v-halo" r="7.5" fill="none" stroke="#231F20" stroke-width="1.1" stroke-dasharray="2 3" opacity=".7"></circle><circle r="3.8" fill="#FAFAF8" stroke="#231F20" stroke-width="1.3"></circle><circle r="1.3" fill="#231F20"></circle></g>
+    </g>
+
+    <!-- ═══ STATE · pulse: one gradient thread through the structure ═══ -->
+    <path id="vPulse" class="v-pulse" d="M134 356 V266 H636 V424 H124 V270" stroke="url(#vGrad)" stroke-width="2.5" stroke-linecap="round" fill="none"></path>
+
+    <!-- ═══ STATE · alive: LEDs + the core ═══ -->
+    <g class="v-leds">
+      <circle class="v-led" style="--i:0" cx="352" cy="318.5" r="1.7" fill="url(#vGrad)"></circle>
+      <circle class="v-led" style="--i:1" cx="370" cy="326.5" r="1.7" fill="url(#vGrad)"></circle>
+      <circle class="v-led" style="--i:2" cx="283" cy="364" r="1.7" fill="url(#vGrad)"></circle>
+      <circle class="v-led" style="--i:3" cx="436" cy="210" r="1.7" fill="url(#vGrad)"></circle>
+      <circle class="v-led" style="--i:4" cx="248" cy="240" r="1.6" fill="url(#vGrad)"></circle>
+      <circle class="v-led" style="--i:5" cx="520.5" cy="276" r="1.7" fill="url(#vGrad)"></circle>
+      <circle class="v-led" style="--i:6" cx="586.5" cy="276" r="1.7" fill="url(#vGrad)"></circle>
+    </g>
+    <!-- center Grape core indicator removed per request -->
+
+  </g>
+
+  <!-- ── landscaping, in front ── -->
+  <g class="v-front">
+    <rect x="16" y="420" width="64" height="16" rx="8" fill="#E3E1DB"></rect>
+    <rect x="642" y="421" width="66" height="15" rx="7.5" fill="#E3E1DB"></rect>
+  </g>
+
+  <g fill="none" aria-hidden="true"><circle id="zA" cx="180" cy="236" r="0.5"/><circle id="zB" cx="398" cy="232" r="0.5"/><circle id="zC" cx="222" cy="360" r="0.5"/><circle id="zD" cx="560" cy="360" r="0.5"/></g>
+</svg>
+      </figure>
+
+      <!-- 02 · what we believe -->
+      <div class="house__copy" id="copy2">
+        <div class="beat__kick">02 — What we believe</div>
+        <h2>The best technology disappears.</h2>
+        <p>No panels demanding attention, no apps fighting each other. Just a home that quietly does the right thing.</p>
+      </div>
+
+      <!-- 03 · made for your home -->
+      <div class="house__copy" id="copy3">
+        <div class="beat__kick">03 — Made for your home</div>
+        <h2>No two Grape homes are the same.</h2>
+        <p>Every system is shaped around your rooms, your routines, and the way you live — never a fixed bundle.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · how we work — PINNED STOP -->
+  <section class="hold" id="run04" data-screen-label="About — How we work">
+    <div class="hold__pin">
+      <div class="reveal hold__copy hold__copy--steps" id="copy4">
+        <div class="beat__kick">04 — How we work</div>
+        <h2>We come to you first.</h2>
+        <p>From first visit to final tune-up, one team carries your home the whole way.</p>
+        <ul class="steps">
+          <li><span class="n">01</span><span class="s">A free visit, in your space</span></li>
+          <li><span class="n">02</span><span class="s">An itemized proposal — in USD</span></li>
+          <li><span class="n">03</span><span class="s">Installed &amp; cared for by our own team</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · landing / arrival -->
+  <section class="land" data-beat="6" data-screen-label="About — Landing">
+    <div class="land__glow" aria-hidden="true"></div>
+    <div class="land__stage">
+      <div class="land__spacer" aria-hidden="true"><span class="land__logoGlow"></span></div>
+      <div class="reveal land__copy">
+        <div class="land__word">Grape</div>
+        <div class="land__sub">Your home, as one.</div>
+        <p class="land__trust">Designed, installed, and cared for in the MENA region.</p>
+        <a class="land__cta" href="https://wa.me/96170832892" data-open-sheet="">Get in touch <em>→</em></a>
+        <a class="land__how" href="/#consult">See how it works</a>
+      </div>
+    </div>
+    <footer class="land__footer reveal">
+      <div class="land__slogan">Smart solutions tailored for all.</div>
+      <div class="land__social">
+        <a class="land__soc" href="https://instagram.com/grapemena" target="_blank" rel="noopener" aria-label="Grape on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"></circle></svg></a>
+        <a class="land__soc" href="https://wa.me/96170832892" target="_blank" rel="noopener" aria-label="Grape on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"></path></svg></a>
+      </div>
+      <nav class="land__nav">
+        <a href="/">Home</a><span>·</span><a href="services.html">Services</a><span>·</span><a href="/#consult">How it works</a>
+      </nav>
+      <div class="land__copyline">© 2025 Grape MENA · Beirut, Lebanon.</div>
+    </footer>
+  </section>
+</main>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const docEl  = document.documentElement;
+  const stage  = document.getElementById('stage');
+  const progEl = document.getElementById('prog');
+  const wrap   = document.getElementById('houseWrap');
+  const pin    = document.querySelector('.house__pin');
+  const runway = document.getElementById('houseRunway');
+  const copy2  = document.getElementById('copy2');
+  const copy3  = document.getElementById('copy3');
+  const run01  = document.getElementById('run01');
+  const run04  = document.getElementById('run04');
+  const spacer = document.querySelector('.land__spacer');
+  const shapes = ['s1','s2','s3','s4'].map(id => document.getElementById(id));
+  const anchors = ['zA','zB','zC','zD'].map(id => document.getElementById(id));
+
+  const lerp = (a,b,t) => a + (b-a)*t;
+  const clamp = (v,lo,hi) => Math.min(hi, Math.max(lo, v));
+  const smooth = t => { t = clamp(t,0,1); return t*t*(3-2*t); };
+  const backOut = t => 1 + 2.70158*Math.pow(t-1,3) + 1.70158*Math.pow(t-1,2);
+  const hex = h => [parseInt(h.slice(1,3),16), parseInt(h.slice(3,5),16), parseInt(h.slice(5,7),16)];
+  const mix = (a,b,t) => `rgb(${Math.round(lerp(a[0],b[0],t))},${Math.round(lerp(a[1],b[1],t))},${Math.round(lerp(a[2],b[2],t))})`;
+  const PAPER=hex('#FAFAF8'), NIGHT=hex('#121011'), INK=hex('#231F20'), WHITE=hex('#FFFFFF');
+  const COOL=hex('#8A9199'), WARMW=hex('#ECE6D9');
+
+  /* shape stations (viewport fractions) */
+  const HERO  = [{x:.18,y:.17,r:-16,s:1.00},{x:.82,y:.15,r:34,s:.86},{x:.80,y:.72,r:14,s:.92},{x:.42,y:.83,r:0,s:.96}];
+  const HOVER = [{x:.28,y:.24,r:-8,s:.82},{x:.68,y:.22,r:18,s:.78},{x:.40,y:.30,r:6,s:.80},{x:.70,y:.30,r:0,s:.82}];
+  const EXIT  = [{x:.22,y:.26,r:-6,s:.70},{x:.74,y:.24,r:14,s:.68},{x:.34,y:.42,r:4,s:.72},{x:.66,y:.44,r:0,s:.74}];
+  const B05   = [{x:.20,y:.22,r:-6,s:.68},{x:.76,y:.20,r:12,s:.66},{x:.30,y:.60,r:0,s:.70},{x:.72,y:.62,r:0,s:.70}];
+  const LAND  = [{x:.335,r:0,s:.72},{x:.443,r:-45,s:.72},{x:.557,r:0,s:.72},{x:.672,r:0,s:.72}];
+  const HOLD4 = [{x:.22,y:.17,r:-6,s:.70},{x:.76,y:.16,r:12,s:.68},{x:.40,y:.24,r:4,s:.70},{x:.60,y:.25,r:0,s:.72}];
+  const IGNITE = [.10,.13,.16,.19];
+
+  /* pointer physics + readability */
+  const px = {x:-9999,y:-9999};
+  const off = shapes.map(()=>({x:0,y:0}));
+  const fadeA = shapes.map(()=>1);
+  const revealEls = Array.from(document.querySelectorAll('.beat .reveal, .hold__copy'));
+  const onMove = e => { const t=e.touches?e.touches[0]:e; px.x=t.clientX; px.y=t.clientY; };
+  const onEnd = () => { px.x=-9999; px.y=-9999; };
+  if(!reduce){
+    addEventListener('pointermove',onMove,{passive:true});
+    addEventListener('touchmove',onMove,{passive:true});
+    addEventListener('touchend',onEnd,{passive:true});
+    addEventListener('pointerleave',onEnd,{passive:true});
+  }
+
+  /* text reveals for the normal beats */
+  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); }), {threshold:.25});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const setCopy = (el, hp, a,b,c,d) => {
+    const inn = smooth(clamp((hp-a)/(b-a),0,1));
+    const out = smooth(clamp((hp-c)/(d-c),0,1));
+    const v = inn*(1-out);
+    el.style.opacity = v.toFixed(3);
+    el.style.transform = `translateY(${(22*(1-v)).toFixed(1)}px)`;
+  };
+
+  const t0 = performance.now();
+
+  function frame(now){
+    const vw=innerWidth, vh=innerHeight;
+    const max=Math.max(1, docEl.scrollHeight - vh);
+    const p=clamp(scrollY/max,0,1);
+    const time=(now-t0)/1000;
+
+    /* ---- four pinned STOPS, measured (device-robust): 01 · house(02/03) · 04 ---- */
+    const segOf = el => {
+      const r=el.getBoundingClientRect();
+      const topDoc=scrollY+r.top, hh=el.offsetHeight, travel=Math.max(1,hh-vh);
+      return {startP:clamp(topDoc/max,0,1), endP:clamp((topDoc+hh-vh)/max,0,1), local:clamp(-r.top/travel,0,1)};
+    };
+    const m1 = run01 ? segOf(run01) : null;
+    const mh = segOf(runway);
+    const m4 = run04 ? segOf(run04) : null;
+
+    let phase;
+    if(m1 && p < m1.startP-1e-4) phase='hero';
+    else if(m1 && p <= m1.endP+1e-4) phase='hold01';
+    else if(p <= mh.endP+1e-4) phase='house';
+    else if(m4 && p <= m4.endP+1e-4) phase='hold04';
+    else phase='land';
+
+    const hp     = mh.local;
+    const heroT  = m1 ? smooth(clamp(p/Math.max(1e-4,m1.startP),0,1)) : 0;
+    const hold1T = m1 ? m1.local : 0;
+    const hold4T = m4 ? m4.local : 0;
+    const landRef= m4 ? m4.endP : mh.endP;
+    const landT  = smooth(clamp((p-landRef)/Math.max(1e-4,1-landRef),0,1));
+    const afterHouse = clamp((p-mh.endP)/Math.max(1e-4,1-mh.endP),0,1);
+
+    /* --- the same villa wakes only while it holds the stage (beats 02/03) --- */
+    let hstate;
+    if(reduce) hstate='alive';
+    else if(phase==='house') hstate = hp>=0.16 ? 'alive' : hp>=0.10 ? 'pulse' : hp>=0.035 ? 'systems' : 'quiet';
+    else if(phase==='hold04' || phase==='land') hstate='alive';   /* it left already lit */
+    else hstate='quiet';                                          /* hero / hold01 */
+    if(wrap.getAttribute('data-state')!==hstate) wrap.setAttribute('data-state',hstate);
+    if(pin) pin.classList.toggle('alive', hstate==='alive');
+
+    /* background: warm paper through the lit-house stops, then sink to night as the shapes leave for the landing */
+    const night = smooth(clamp((afterHouse-0.04)/0.5,0,1));
+    docEl.style.setProperty('--bg', mix(PAPER,NIGHT,night));
+    docEl.style.setProperty('--fg', mix(INK,WHITE,night));
+    /* header inverts to ink while the page is still on paper, back to white once it turns night */
+    docEl.classList.toggle('on-light', night < 0.5);
+
+    /* progress hairline */
+    progEl.style.width=(p*100).toFixed(2)+'%';
+
+    /* shape labels while they settle at the 01 stop */
+    stage.classList.toggle('tags', phase==='hold01' && hold1T>0.12 && hold1T<0.9);
+
+    /* pinned house copy (02/03); the 01/04 stop copy is held by .reveal */
+    if(phase==='house'){
+      setCopy(copy2, hp, .20,.28, .40,.47);
+      setCopy(copy3, hp, .50,.58, .82,.90);
+    } else {
+      copy2.style.opacity=0; copy3.style.opacity=0;
+    }
+
+    /* measured zone centres (for dive/emerge) */
+    const zc = anchors.map(a => { const r=a.getBoundingClientRect(); return {x:r.left+r.width/2, y:r.top+r.height/2}; });
+
+    /* landing: shapes go ink → white (with the night) → clean warm gradient, no muddy blend */
+    const legB = phase==='land' ? smooth(clamp((landT-0.45)/0.4,0,1)) : 0;
+    docEl.style.setProperty('--gop', legB.toFixed(3));
+    docEl.style.setProperty('--sop', (1-legB).toFixed(3));
+
+    const sr = spacer.getBoundingClientRect();
+    const anchorY = sr.top + sr.height/2;
+
+    /* current on-screen text rects for readability fade */
+    const textRects=[];
+    for(const rv of revealEls){ const r=rv.getBoundingClientRect(); if(r.bottom>-20&&r.top<vh+20&&r.height) textRects.push(r); }
+
+    shapes.forEach((el,n) => {
+      let X,Y,R,S,OP=1;
+      if(phase==='hero'){
+        const t=heroT;
+        X=lerp(HERO[n].x,HOVER[n].x,t)*vw;
+        Y=lerp(HERO[n].y,HOVER[n].y,t)*vh;
+        R=lerp(HERO[n].r,HOVER[n].r,t);
+        S=lerp(HERO[n].s,HOVER[n].s,t);
+      } else if(phase==='hold01'){
+        /* STOP — settled above the 01 copy, calm (not mid-flight) */
+        X=HOVER[n].x*vw; Y=HOVER[n].y*vh; R=HOVER[n].r; S=HOVER[n].s;
+      } else if(phase==='house'){
+        if(reduce){
+          X=HOVER[n].x*vw; Y=HOVER[n].y*vh; R=HOVER[n].r; S=HOVER[n].s;
+        } else {
+          const dive=smooth(clamp((hp - n*0.035)/0.16,0,1));
+          const emerge=smooth(clamp((hp-0.80)/0.20,0,1));
+          if(hp<0.5){
+            X=lerp(HOVER[n].x*vw, zc[n].x, dive);
+            Y=lerp(HOVER[n].y*vh, zc[n].y, dive);
+            S=lerp(HOVER[n].s, 0.30, dive);
+            R=lerp(HOVER[n].r, 0, dive);
+            OP=1 - smooth(clamp((dive-0.78)/0.22,0,1));
+          } else {
+            X=lerp(zc[n].x, EXIT[n].x*vw, emerge);
+            Y=lerp(zc[n].y, EXIT[n].y*vh, emerge);
+            S=lerp(0.30, EXIT[n].s, emerge);
+            R=lerp(0, EXIT[n].r, emerge);
+            OP=smooth(clamp(emerge/0.34,0,1));
+          }
+        }
+      } else if(phase==='hold04'){
+        /* gather from where the house left them, then STOP settled above the 04 copy */
+        const src = reduce ? HOVER : EXIT;
+        const g=smooth(clamp(hold4T/0.28,0,1));
+        X=lerp(src[n].x, HOLD4[n].x, g)*vw;
+        Y=lerp(src[n].y, HOLD4[n].y, g)*vh;
+        R=lerp(src[n].r, HOLD4[n].r, g);
+        S=lerp(src[n].s, HOLD4[n].s, g);
+      } else { /* land — release into the assembled logo */
+        const t=smooth(landT);
+        X=lerp(HOLD4[n].x*vw, LAND[n].x*vw, t);
+        Y=lerp(HOLD4[n].y*vh, anchorY, t);
+        R=lerp(HOLD4[n].r, LAND[n].r, t);
+        S=lerp(HOLD4[n].s, LAND[n].s, t);
+      }
+
+      /* entrance pop on first load */
+      const it = reduce ? 1 : clamp((time-.15-n*.12)/.7,0,1);
+      const intro = it>=1 ? 1 : backOut(it);
+
+      /* idle drift + pointer repel only while floating */
+      let dx=0,dy=0,dr=0;
+      const floating = (phase!=='house');
+      if(!reduce && floating){
+        dy=Math.sin(time*(0.7+n*0.13)+n*2.1)*5;
+        dx=Math.cos(time*(0.5+n*0.11)+n*1.3)*3;
+        dr=Math.sin(time*0.4+n)*1.5;
+        const ddx=X-px.x, ddy=Y-px.y, dist=Math.hypot(ddx,ddy);
+        let gx=0,gy=0;
+        if(dist<170 && dist>0.01){ const push=(170-dist)/170*40; gx=ddx/dist*push; gy=ddy/dist*push; }
+        off[n].x=lerp(off[n].x,gx,0.09); off[n].y=lerp(off[n].y,gy,0.09);
+      } else { off[n].x=lerp(off[n].x,0,0.12); off[n].y=lerp(off[n].y,0,0.12); }
+
+      if(floating){ Y=clamp(Y,104,vh-72); }
+
+      const half=el.offsetWidth/2;
+      const sc=S*intro;
+      const gx=X+dx+off[n].x-half, gy=Y+dy+off[n].y-half;
+
+      /* readability: fade while crossing text (floating only) */
+      let cover=0;
+      if(floating && OP>0.02){
+        const cxp=gx+half, cyp=gy+half, hv=half*sc;
+        for(const r of textRects){
+          const ox=Math.min(cxp+hv,r.right+8)-Math.max(cxp-hv,r.left-8);
+          const oy=Math.min(cyp+hv,r.bottom+8)-Math.max(cyp-hv,r.top-8);
+          if(ox>0&&oy>0){ const c=(ox*oy)/Math.max(1,(hv*2)*(hv*2)); if(c>cover)cover=c; }
+        }
+      }
+      const fadeT=1-.86*clamp(cover*1.6,0,1);
+      fadeA[n]=lerp(fadeA[n],fadeT,.14);
+
+      el.style.opacity=(OP*fadeA[n]).toFixed(3);
+      el.style.transform=`translate3d(${gx.toFixed(1)}px,${gy.toFixed(1)}px,0) rotate(${(R+dr).toFixed(2)}deg) scale(${sc.toFixed(3)})`;
+    });
+
+    requestAnimationFrame(frame);
+  }
+  frame(performance.now());   /* correct first paint even before the first rAF tick */
+})();
+</script>
+
+<div class="sheet" id="visitSheet" hidden="">
+    <div class="sheet__backdrop" data-close=""></div>
+    <div class="sheet__panel" role="dialog" aria-modal="true" aria-label="Get in touch">
+      <button class="sheet__close" data-close="" type="button" aria-label="Close">×</button>
+      <span class="sheet__grab" aria-hidden="true"></span>
+      <h3 class="sheet__title">Get in touch</h3>
+      <p class="sheet__sub">Choose how you’d like to start.</p>
+      <div class="sheet__opts">
+        <a class="sheet__opt wa" href="https://wa.me/96170832892?text=Hi%20Grape%2C%20I%27d%20like%20to%20book%20a%20smart-home%20visit." target="_blank" rel="noopener"><span class="sheet__ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"></path></svg></span><span class="sheet__meta"><b>WhatsApp Us</b><small>Fastest way to speak with our team.</small></span><span class="sheet__go" aria-hidden="true">→</span></a>
+        <a class="sheet__opt em" href="mailto:admin@grapemena.com?subject=Smart-home%20visit%20inquiry"><span class="sheet__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"></rect><path d="M3 7l9 6 9-6"></path></svg></span><span class="sheet__meta"><b>Email Us</b><small>Send us your requirements or project details.</small></span><span class="sheet__go" aria-hidden="true">→</span></a>
+        <a class="sheet__opt form" href="/#consult"><span class="sheet__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H6a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"></path><path d="M9 4a2 2 0 0 1 2-1h2a2 2 0 0 1 2 1"></path><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L14 13l-4 1 1-4z"></path></svg></span><span class="sheet__meta"><b>Fill Inquiry Form</b><small>Share your property details and preferred services.</small></span><span class="sheet__go" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var sheet=document.getElementById('visitSheet');
+    if(!sheet) return;
+    var triggers=[].slice.call(document.querySelectorAll('[data-open-sheet]'));
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, ct, last=null;
+    var _sT=sheet.querySelector('.sheet__title'), _sS=sheet.querySelector('.sheet__sub');
+    function setSheetMode(m){ if(m==='support'){ if(_sT)_sT.textContent='How can we help?'; if(_sS)_sS.textContent='Reach our team — we’re here for you.'; } else { if(_sT)_sT.textContent='Get in touch'; if(_sS)_sS.textContent='Choose how you’d like to start.'; } }
+    window.__grapeSheetMode=setSheetMode;
+    function open(tr){ last=tr||null; clearTimeout(ct); sheet.hidden=false; if(reduce)sheet.classList.add('open'); else requestAnimationFrame(function(){requestAnimationFrame(function(){sheet.classList.add('open');});}); if(last)last.setAttribute('aria-expanded','true'); }
+    function close(){ sheet.classList.remove('open'); if(last)last.setAttribute('aria-expanded','false'); if(reduce)sheet.hidden=true; else ct=setTimeout(function(){if(!sheet.classList.contains('open'))sheet.hidden=true;},420); }
+    triggers.forEach(function(tr){ tr.addEventListener('click',function(e){ e.preventDefault(); e.stopPropagation(); setSheetMode('sales'); open(tr); }); });
+    sheet.querySelectorAll('[data-close]').forEach(function(el){ el.addEventListener('click',close); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&sheet.classList.contains('open'))close(); });
+    sheet.querySelectorAll('a.sheet__opt').forEach(function(a){ a.addEventListener('click',close); });
+  })();
+  </script>
+
+  <div class="navmenu" id="navMenu" hidden="">
+    <div class="navmenu__backdrop" data-close=""></div>
+    <aside class="navmenu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="navmenu__top">
+        <a class="navmenu__logo" href="/" aria-label="Grape — home"><img class="navmenu__mark" src="assets/logo-mark.png" alt=""><img class="navmenu__word" src="assets/logo-word.png" alt="Grape"></a>
+        <button class="navmenu__close" data-close="" type="button" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="navmenu__links" aria-label="Site">
+        <a href="/"><span class="n">01</span><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5.5 9.5V20a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V9.5"></path></svg></span><span class="t">Home</span></a>
+        <a href="services.html"><span class="n">02</span><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"></rect><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"></rect><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"></rect><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"></rect></svg></span><span class="t">Our Solutions</span></a>
+        <a href="/#consult"><span class="n">03</span><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="1.6"></circle><circle cx="5" cy="12" r="1.6"></circle><circle cx="5" cy="18" r="1.6"></circle><path d="M9.5 6h10M9.5 12h10M9.5 18h10"></path></svg></span><span class="t">How it works</span></a>
+        <a href="about.html" data-about><span class="n">04</span><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5"></path><path d="M12 7.6h0.01"></path></svg></span><span class="t">About us</span></a>
+        <a href="#book" data-book=""><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"></rect><path d="M8 3v4M16 3v4M3.5 10h17"></path></svg></span><span class="ct"><span class="t">Get in touch</span><span class="sub">For new clients</span></span></a>
+      </nav>
+      <a class="navmenu__support" href="/#consult" data-book=""><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"></path><rect x="3" y="12.5" width="4" height="7" rx="2"></rect><rect x="17" y="12.5" width="4" height="7" rx="2"></rect><path d="M20 19.5a3 3 0 0 1-3 2.5h-3"></path></svg></span><span class="ct"><span class="t">Support</span><span class="sub">For existing clients</span></span></a>
+      <div class="navmenu__foot">
+        <span class="navmenu__brand">Smart solutions tailored for all</span>
+      </div>
+    </aside>
+  </div>
+  <script>
+  (function(){
+    var btn=document.getElementById('menuBtn'), menu=document.getElementById('navMenu');
+    if(!btn||!menu) return;
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, t;
+    function open(){clearTimeout(t);menu.hidden=false;if(reduce)menu.classList.add('open');else requestAnimationFrame(function(){requestAnimationFrame(function(){menu.classList.add('open');});});btn.setAttribute('aria-expanded','true');}
+    function close(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');if(reduce)menu.hidden=true;else t=setTimeout(function(){if(!menu.classList.contains('open'))menu.hidden=true;},420);}
+    btn.addEventListener('click',function(e){e.stopPropagation();open();});
+    menu.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',close);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open'))close();});
+    menu.querySelectorAll('.navmenu__links a, .navmenu__line, .navmenu__support').forEach(function(a){a.addEventListener('click',function(e){if(a.hasAttribute('data-book')){e.preventDefault();close();var support=a.classList.contains('navmenu__support');setTimeout(function(){var t=document.querySelector('[data-open-sheet]');if(t)t.click();if(support&&window.__grapeSheetMode)window.__grapeSheetMode('support');},reduce?0:320);return;}if((a.getAttribute('href')||'')==='#'){e.preventDefault();close();return;}close();});});
+  })();
+  </script>
+</body></html>

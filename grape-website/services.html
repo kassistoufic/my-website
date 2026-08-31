@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5FNWCN79');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#151314">
+  <title>Grape — Our Solutions</title>
+  <meta name="description" content="Explore every intelligent system Grape designs, integrates and supports — comfort, energy, security and control.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="grape.css">
+  <link rel="stylesheet" href="grape-mobile.css">
+  <link rel="canonical" href="https://grapemena.com/services.html">
+  <meta property="og:title" content="Grape — Our Solutions">
+  <meta property="og:description" content="Explore every intelligent system Grape designs, integrates and supports — comfort, energy, security and control.">
+  <meta property="og:image" content="https://grapemena.com/assets/og.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://grapemena.com/services.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root{
+      --ink:#231F20; --white2:#F5F5F4; --warm:rgba(255,255,255,0.62); --night:#151314;
+      --ease:cubic-bezier(.4,0,.2,1);
+      --fserif:var(--font-grotesk);
+      --fmono:var(--font-grotesk);
+      --fsans:var(--font-grotesk);
+    }
+    .svc{ background:var(--night); color:var(--white); }
+    .svc *{ box-sizing:border-box; }
+    .svc-hero{ position:relative; overflow:hidden; text-align:center; padding:calc(env(safe-area-inset-top) + 104px) 22px clamp(34px,7vw,60px); }
+    .svc-hero__bg{ position:absolute; inset:0; pointer-events:none; background:radial-gradient(120% 80% at 50% -10%, rgba(255,255,255,.06), transparent 60%); }
+    .svc-hero__bg::after{ content:""; position:absolute; left:50%; bottom:0; width:min(560px,86%); height:1px; transform:translateX(-50%); background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent); }
+    .svc-hero__eyebrow{ position:relative; font-family:var(--fmono); font-size:10px; letter-spacing:.32em; text-transform:uppercase; color:var(--warm); }
+    .svc-hero__title{ position:relative; font-family:var(--font-grotesk); font-weight:700; font-size:clamp(2.6rem,11vw,4.4rem); line-height:1; letter-spacing:-.01em; margin:14px 0 0; }
+    .svc-hero__sub{ position:relative; margin:16px auto 0; max-width:42ch; font-family:var(--fsans); font-weight:300; font-size:1.02rem; line-height:1.55; color:rgba(255,255,255,.72); }
+    .snav{ position:sticky; top:calc(64px + env(safe-area-inset-top)); z-index:40; display:flex; justify-content:center; }
+    .snav__inner{ display:flex; gap:6px; padding:8px; margin:6px 0 0; border-radius:999px; background:rgba(17,16,16,.72); -webkit-backdrop-filter:blur(14px) saturate(1.1); backdrop-filter:blur(14px) saturate(1.1); border:1px solid rgba(255,255,255,.1); box-shadow:0 12px 30px -16px rgba(0,0,0,.7); overflow-x:auto; -ms-overflow-style:none; scrollbar-width:none; }
+    .snav__inner::-webkit-scrollbar{ display:none; }
+    .snav__pill{ flex:0 0 auto; font-family:var(--fmono); font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.6); padding:8px 16px; border-radius:999px; border:1px solid transparent; background:transparent; cursor:pointer; white-space:nowrap; transition:color .2s, background-color .2s; }
+    .snav__pill:hover{ color:var(--white); }
+    .snav__pill.active{ color:var(--ink); background:var(--white2); }
+    .svc-list{ max-width:680px; margin:0 auto; padding:clamp(8px,2vw,18px) clamp(16px,4vw,26px) 0; display:flex; flex-direction:column; gap:14px; }
+    .cat{ padding:clamp(40px,7vw,80px) 0 0; scroll-margin-top:calc(128px + env(safe-area-inset-top)); }
+    .cat__head{ max-width:60ch; margin:0 0 clamp(20px,3vw,30px); }
+    .cat__num{ font-family:var(--fmono); font-size:.66rem; letter-spacing:.24em; color:var(--acc); }
+    .cat__title{ font-family:var(--font-grotesk); font-weight:700; font-size:clamp(2rem,6.5vw,3rem); line-height:1.02; letter-spacing:-.01em; margin:8px 0 0; }
+    .cat__lead{ font-family:var(--fsans); font-weight:300; font-size:1rem; line-height:1.55; color:rgba(255,255,255,.66); margin:12px 0 0; max-width:48ch; }
+    .feat{ display:grid; grid-template-columns:1.05fr 1fr; gap:clamp(14px,2.4vw,26px); align-items:stretch; background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.12); border-radius:22px; padding:clamp(14px,2vw,18px); margin-bottom:12px; }
+    .feat__media{ min-height:230px; }
+    .feat__slot{ width:100%; height:100%; min-height:230px; display:block; }
+    .feat__body{ display:flex; flex-direction:column; justify-content:center; padding:clamp(10px,2.5vw,26px) clamp(8px,2vw,20px); }
+    .feat__tag{ align-self:flex-start; font-family:var(--fmono); font-size:.56rem; letter-spacing:.2em; text-transform:uppercase; color:var(--ink); background:var(--acc); padding:5px 11px; border-radius:999px; margin-bottom:18px; }
+    .feat__ico{ display:block; width:34px; height:34px; color:var(--white); margin-bottom:14px; }
+    .feat__ico svg{ width:100%; height:100%; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+    .feat__title{ font-family:var(--font-grotesk); font-weight:700; font-size:clamp(1.7rem,4vw,2.3rem); line-height:1.06; letter-spacing:-.01em; margin:0; }
+    .feat__desc{ font-family:var(--fsans); font-weight:300; font-size:1rem; line-height:1.55; color:rgba(255,255,255,.7); margin:12px 0 0; max-width:38ch; }
+    .feat__best{ margin-top:18px; display:inline-flex; align-items:center; gap:8px; font-family:var(--fmono); font-size:.6rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.66); }
+    .feat--flip .feat__media{ order:2; }
+    .feat--flip .feat__body{ order:1; }
+    .dot{ width:6px; height:6px; border-radius:50%; background:var(--acc); display:inline-block; }
+    .cat__banner{ border-radius:20px; overflow:hidden; border:1px solid rgba(255,255,255,.12); margin-bottom:clamp(16px,2.6vw,22px); aspect-ratio:16/7; background:var(--ink); }
+    .cat__banner img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .8s var(--ease); }
+    .cat__banner:hover img{ transform:scale(1.03); }
+    @media (max-width:560px){ .cat__banner{ aspect-ratio:16/9; } }
+    /* ===== Accordion image cards ===== */
+    .acc{ scroll-margin-top:calc(118px + env(safe-area-inset-top)); border-radius:24px; }
+    .acc__card{ position:relative; display:block; width:100%; height:clamp(225px,36vh,345px); padding:0; margin:0; border:1px solid rgba(255,255,255,.12); border-radius:24px; overflow:hidden; cursor:pointer; background:var(--ink); text-align:left; color:var(--white); transition:box-shadow .4s var(--ease), border-color .35s var(--ease); }
+    .acc__img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .8s var(--ease); }
+    .acc.open .acc__img,.acc__card:hover .acc__img{ transform:scale(1.04); }
+    .acc__scrim{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(17,16,16,.12) 0%, rgba(17,16,16,.04) 36%, rgba(17,16,16,.6) 76%, rgba(17,16,16,.88) 100%); }
+    .acc__txt{ position:absolute; left:0; right:62px; bottom:0; padding:clamp(18px,4.4vw,26px); display:flex; flex-direction:column; gap:9px; }
+    .acc__num{ font-family:var(--fmono); font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--acc); text-shadow:0 1px 10px rgba(0,0,0,.7); }
+    .acc__hook{ font-family:var(--font-grotesk); font-weight:700; font-size:clamp(1.9rem,7vw,2.7rem); line-height:1.02; letter-spacing:-.01em; color:#fff; text-shadow:0 2px 20px rgba(0,0,0,.55); }
+    .acc__caret{ position:absolute; right:clamp(14px,3.4vw,20px); bottom:clamp(16px,3.4vw,22px); width:44px; height:44px; min-width:44px; min-height:44px; aspect-ratio:1/1; flex:0 0 auto; align-self:center; box-sizing:border-box; padding:0; border-radius:50%; overflow:hidden; display:grid; place-items:center; background:rgba(17,16,16,.62); border:1px solid rgba(255,255,255,.32); color:#fff; transition:background-color .3s, color .3s, border-color .3s; }
+    .acc__caret svg{ display:block; margin:0; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; transition:transform .4s var(--ease); }
+    .acc.open .acc__caret{ border-color:rgba(255,255,255,0.45); }
+    .acc.open .acc__caret svg{ transform:rotate(180deg); stroke:url(#svcGradWarm); }
+    .acc__card:hover{ border-color:color-mix(in srgb, var(--acc) 45%, transparent); }
+    .acc.open .acc__card{ border-color:color-mix(in srgb, var(--acc) 70%, transparent); box-shadow:0 0 0 1px color-mix(in srgb, var(--acc) 45%, transparent), 0 26px 60px -28px color-mix(in srgb, var(--acc) 80%, #000), 0 0 48px -12px color-mix(in srgb, var(--acc) 42%, transparent); }
+    .acc__panel{ height:0; overflow:hidden; }
+    .acc.open .acc__panel{ height:auto; }
+    .acc__inner{ min-height:0; }
+    .acc__lead{ font-family:var(--fsans); font-weight:300; font-size:1rem; line-height:1.55; color:rgba(255,255,255,.7); margin:18px 2px 16px; max-width:48ch; }
+    .acc__inner .cards{ padding-bottom:6px; }
+    @media (prefers-reduced-motion:reduce){ .acc__panel,.acc__img,.acc__caret{ transition:none; } }
+    .cards{ display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+    .card{ position:relative; background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.1); border-radius:18px; padding:20px 18px 18px; transition:transform .35s var(--ease), border-color .3s, box-shadow .35s, background-color .3s; }
+    .card:hover{ transform:translateY(-4px); border-color:color-mix(in srgb, var(--acc) 60%, transparent); background:rgba(255,255,255,.06); box-shadow:0 20px 40px -22px rgba(0,0,0,.8); }
+    .card__ico{ display:block; width:28px; height:28px; color:var(--white2); margin-bottom:14px; transition:transform .35s var(--ease), color .3s; }
+    .card__ico svg{ width:100%; height:100%; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+    .card:hover .card__ico{ transform:scale(1.1); color:var(--acc); }
+    /* on drop-down (open category) the service icons take the brand gradient */
+    .acc.open .card__ico svg{ stroke:url(#svcGradWarm); }
+    .acc.open .card:hover .card__ico{ color:inherit; }
+    .card__title{ font-family:var(--fsans); font-weight:500; font-size:1.02rem; line-height:1.2; margin:0; letter-spacing:-.005em; }
+    .card__desc{ font-family:var(--fsans); font-weight:300; font-size:.9rem; line-height:1.5; color:rgba(255,255,255,.64); margin:8px 0 0; }
+    .card__best{ margin-top:14px; display:inline-flex; align-items:center; gap:7px; font-family:var(--fmono); font-size:.56rem; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+    @media (max-width:560px){
+      /* opened category: 5 compact full-width rows, all fit one screen (no scroll) */
+      .cards{ display:flex; flex-direction:column; gap:8px; overflow:visible; padding:2px 0 6px; }
+      .card{ display:grid; grid-template-columns:auto 1fr; column-gap:12px; row-gap:1px; align-items:center; padding:10px 14px; }
+      .card__ico{ grid-column:1; grid-row:1 / span 2; align-self:center; width:24px; height:24px; margin:0; }
+      .card__title{ grid-column:2; font-size:.92rem; }
+      .card__desc{ grid-column:2; margin:0; font-size:.76rem; line-height:1.3; display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; }
+      /* uniform compact category box in BOTH closed and open states (all 4) */
+      .acc__card{ height:clamp(140px,20vh,180px); }
+      .acc.open .acc__card{ height:clamp(140px,20vh,180px); }
+    }
+    .svc-cta{ position:relative; overflow:hidden; text-align:center; margin-top:clamp(48px,8vw,96px); padding:clamp(60px,10vw,120px) 22px calc(72px + env(safe-area-inset-bottom)); }
+    .svc-cta__bg{ position:absolute; inset:0; pointer-events:none; background:radial-gradient(80% 120% at 50% 120%, rgba(255,255,255,.07), transparent 62%); }
+    .svc-cta__bg::before{ content:""; position:absolute; left:50%; top:0; width:min(560px,86%); height:1px; transform:translateX(-50%); background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent); }
+    .svc-cta__title{ position:relative; font-family:var(--font-grotesk); font-weight:700; font-size:clamp(2rem,7vw,3.1rem); line-height:1.04; margin:0 auto; max-width:18ch; }
+    .svc-cta__sub{ position:relative; font-family:var(--fsans); font-weight:300; font-size:1rem; color:rgba(255,255,255,.7); margin:14px auto 0; max-width:42ch; }
+    .svc-cta__actions{ position:relative; display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:28px; }
+    .svc-btn{ font-family:var(--fmono); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; padding:14px 26px; border-radius:999px; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition:transform .2s var(--ease), background-color .25s, border-color .25s, color .25s; }
+    .svc-btn:active{ transform:scale(.97); }
+    .svc-btn{ align-items:center; gap:10px; }
+    .svc-cta-arr{ display:inline-block; transition:transform .25s var(--ease); }
+    .svc-btn:hover .svc-cta-arr{ transform:translateX(3px); }
+    .svc-btn--primary{ width:100%; max-width:360px; justify-content:center; background:var(--grad-warm); background-repeat:no-repeat; background-size:100% 100%; color:#fff; border:1px solid transparent; }
+    .svc-btn--primary:hover{ box-shadow:0 12px 36px rgba(0,0,0,.36); }
+    .svc-btn--ghost{ background:transparent; color:var(--white); border:1px solid rgba(255,255,255,.28); }
+    .svc-btn--ghost:hover{ border-color:var(--white); }
+    @media (max-width:680px){
+      .feat{ grid-template-columns:1fr; }
+      .feat--flip .feat__media{ order:0; }
+      .feat--flip .feat__body{ order:0; }
+      .feat__media{ min-height:200px; }
+      .feat__slot{ min-height:200px; }
+    }
+    @media (max-width:420px){
+      .cards{ grid-template-columns:1fr 1fr; gap:10px; }
+      .card{ padding:16px 13px 14px; border-radius:15px; }
+      .card__title{ font-size:.92rem; }
+      .card__desc{ font-size:.82rem; }
+    }
+    @media (prefers-reduced-motion:reduce){
+      .card,.card__ico,.svc-btn{ transition:none; }
+    }
+  
+
+/* ---- perfect-circle lock: round icons/buttons stay square (gradient fills stay round) ---- */
+.acc__caret, .hcard__ico, .scard__arrow, .hero2__cta-arrow, .cj__icon, .hpd2__devtop svg {
+  aspect-ratio: 1 / 1; flex: 0 0 auto; box-sizing: border-box;
+}
+  </style>
+  <link rel="stylesheet" href="grape-desktop.css?v=1786039195381">
+  <link rel="stylesheet" href="grape-solutions-showcase.css?v=1786039195381">
+  <script src="grape-events.js" defer></script>
+</head>
+<body class="svc">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FNWCN79"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+  <header class="mbar" id="mbar">
+    <div class="mbar__scrim" aria-hidden="true"></div>
+    <a class="mbar-logo" href="/" aria-label="Grape — home"><img class="mbar-logo__mark" src="assets/logo-mark.png" alt="" width="759" height="206"><img class="mbar-logo__word" src="assets/logo-word.png" alt="Grape" width="854" height="274"></a>
+    <nav class="dnav" style="display:none" aria-label="Primary desktop">
+      <a href="/">Home</a>
+      <a href="services.html" aria-current="page">Our Solutions</a>
+      <a href="/#consult">How it works</a>
+      <a href="about.html">About us</a>
+    </nav>
+    <nav class="mbar__pills" aria-label="Primary">
+      <button class="mbar-cta mbar-cta--book" type="button" data-open-sheet aria-haspopup="dialog" aria-controls="visitSheet"><span class="dotmark" aria-hidden="true"></span>Get in touch</button>
+      <button class="mbar-burger" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="svc-hero" data-screen-label="Services · Hero">
+      <div class="svc-hero__bg" aria-hidden="true"></div>
+      <span class="svc-hero__eyebrow">Grape · Smart Home</span>
+      <h1 class="svc-hero__title">Our Solutions</h1>
+    </section>
+
+    <div class="svc-list">
+      <section class="acc" id="cat-comfort" style="--acc:#FFFFFF" data-screen-label="Services · Comfort">
+        <button class="acc__card" type="button" id="trigger-comfort" aria-expanded="false" aria-controls="panel-comfort">
+          <img class="acc__img" src="assets/sol-comfort.jpg?i=1786040282952" alt="Comfort and Atmosphere" loading="lazy">
+          <span class="acc__scrim" aria-hidden="true"></span>
+          <span class="acc__txt">
+            <span class="acc__num">01</span>
+            <span class="acc__hook">Comfort &amp; Atmosphere</span>
+          </span>
+          <span class="acc__caret" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+        <div class="acc__panel" id="panel-comfort" role="region" aria-labelledby="trigger-comfort">
+          <div class="acc__inner">
+            <p class="acc__lead">Set the perfect mood in every room — light, warmth and sound that move with your day.</p>
+
+        <div class="cards">
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.3 1 2.5h6c0-1.2.3-1.8 1-2.5A6 6 0 0 0 12 3Z"/></svg></span>
+            <h3 class="card__title">Intelligent Lighting Control</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>
+            <h3 class="card__title">Smart Climate Management</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 8.5h16"/><path d="M8.5 8.5c0 4-1.5 7-1.5 11M15.5 8.5c0 4 1.5 7 1.5 11"/></svg></span>
+            <h3 class="card__title">Automated Shading &amp; Curtains</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h2.2l2-6 3 14 3-11 2 5h3.6"/></svg></span>
+            <h3 class="card__title">Multi-Room Audio</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13V5a2 2 0 1 1 4 0v8a4 4 0 1 1-4 0Z"/><path d="M12 15v-5"/></svg></span>
+            <h3 class="card__title">Environmental Monitoring</h3>
+          </article>
+        </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="acc" id="cat-energy" style="--acc:#FFFFFF" data-screen-label="Services · Energy">
+        <button class="acc__card" type="button" id="trigger-energy" aria-expanded="false" aria-controls="panel-energy">
+          <img class="acc__img" src="assets/sol-energy.jpg?i=1786040282952" alt="Energy and Continuity" loading="lazy">
+          <span class="acc__scrim" aria-hidden="true"></span>
+          <span class="acc__txt">
+            <span class="acc__num">02</span>
+            <span class="acc__hook">Energy &amp; Continuity</span>
+          </span>
+          <span class="acc__caret" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+        <div class="acc__panel" id="panel-energy" role="region" aria-labelledby="trigger-energy">
+          <div class="acc__inner">
+            <p class="acc__lead">Stay powered, efficient and aware — built for life with EDL and generators.</p>
+
+        <div class="cards">
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="15" height="9" rx="2"/><path d="M21 11v3"/><path d="M11 9.5l-2 3h2.6l-2 3"/></svg></span>
+            <h3 class="card__title">Power Source &amp; Backup Monitoring</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s5 5.2 5 9a5 5 0 0 1-10 0c0-3.8 5-9 5-9Z"/><path d="M9.6 13.5a2.4 2.4 0 0 0 4.8 0"/></svg></span>
+            <h3 class="card__title">Smart Water Heating</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3v5M15 3v5"/><path d="M7 8h10v2.5a5 5 0 0 1-10 0Z"/><path d="M12 15.5V21"/></svg></span>
+            <h3 class="card__title">Connected Outlets &amp; Appliances</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M10 20V5M15 20v-7M20 20V8"/><path d="M3 20h18"/></svg></span>
+            <h3 class="card__title">Home Energy Insights</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="16" rx="3"/><path d="M6 13.5h12"/><path d="M12 13.5V20"/></svg></span>
+            <h3 class="card__title">Water &amp; Fuel Tank Monitoring</h3>
+          </article>
+        </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="acc" id="cat-security" style="--acc:#FFFFFF" data-screen-label="Services · Security">
+        <button class="acc__card" type="button" id="trigger-security" aria-expanded="false" aria-controls="panel-security">
+          <img class="acc__img" src="assets/sol-security.jpg?i=1786040282952" alt="Security and Safety" loading="lazy">
+          <span class="acc__scrim" aria-hidden="true"></span>
+          <span class="acc__txt">
+            <span class="acc__num">03</span>
+            <span class="acc__hook">Security &amp; Safety</span>
+          </span>
+          <span class="acc__caret" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+        <div class="acc__panel" id="panel-security" role="region" aria-labelledby="trigger-security">
+          <div class="acc__inner">
+            <p class="acc__lead">Protect what matters most — quietly watching, always ready.</p>
+
+        <div class="cards">
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+            <h3 class="card__title">Smart Access Control</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="12" height="10" rx="2"/><path d="M15 10.2l6-3v9.6l-6-3z"/></svg></span>
+            <h3 class="card__title">Video Surveillance</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6z"/><path d="M12 9c-1 1.4-1.8 2.4-1.8 3.8a1.8 1.8 0 0 0 3.6 0c0-.8-.4-1.4-.9-2"/></svg></span>
+            <h3 class="card__title">Leak, Gas &amp; Fire Protection</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12l7-7"/><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 8a4 4 0 1 0 4 4"/></svg></span>
+            <h3 class="card__title">Motion &amp; Intrusion Alerts</h3>
+          </article>
+        </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="acc" id="cat-control" style="--acc:#FFFFFF" data-screen-label="Services · Control">
+        <button class="acc__card" type="button" id="trigger-control" aria-expanded="false" aria-controls="panel-control">
+          <img class="acc__img" src="assets/sol-control.jpg?i=1786040282952" alt="Control and Automation" loading="lazy">
+          <span class="acc__scrim" aria-hidden="true"></span>
+          <span class="acc__txt">
+            <span class="acc__num">04</span>
+            <span class="acc__hook">Control &amp; Automation</span>
+          </span>
+          <span class="acc__caret" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+        <div class="acc__panel" id="panel-control" role="region" aria-labelledby="trigger-control">
+          <div class="acc__inner">
+            <p class="acc__lead">One calm platform for your entire home — present when you need it, invisible when you do not.</p>
+
+        <div class="cards">
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/></svg></span>
+            <h3 class="card__title">Unified Home Control</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg></span>
+            <h3 class="card__title">Voice Assistant Integration</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="8" height="5" rx="2.5"/><rect x="13" y="5" width="8" height="5" rx="2.5"/><rect x="3" y="14" width="8" height="5" rx="2.5"/><rect x="13" y="14" width="8" height="5" rx="2.5"/></svg></span>
+            <h3 class="card__title">Smart Scenes &amp; Automations</h3>
+          </article>
+          <article class="card">
+            <span class="card__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M3 11h16M11 3c2.6 2.6 2.6 13.4 0 16M11 3c-2.6 2.6-2.6 13.4 0 16"/></svg></span>
+            <h3 class="card__title">Remote Home Management</h3>
+          </article>
+        </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="svcx" id="svcx" hidden></div>
+
+    <section class="svc-cta" id="cta" data-screen-label="Services · CTA">
+      <div class="svc-cta__bg" aria-hidden="true"></div>
+      <h2 class="svc-cta__title">Ready to build your smart home?</h2>
+      <div class="svc-cta__actions">
+        <button type="button" class="svc-btn svc-btn--primary" data-open-sheet aria-haspopup="dialog" aria-controls="visitSheet"><span>Get in touch</span> <span class="svc-cta-arr" aria-hidden="true">→</span></button>
+      </div>
+    </section>
+  </main>
+  <script src="grape-solutions-showcase.js"></script>
+
+  <footer class="mfoot">
+    <img class="mfoot__logo" src="assets/logo-word.png" alt="Grape">
+    <nav class="mfoot__links" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="services.html">All services</a>
+      <a href="https://wa.me/96170832892" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="/#consult">Get in touch</a>
+    </nav>
+    <div class="mfoot__bottom">© <span id="year"></span> Grape MENA · Smart Solutions Tailored For All.</div>
+  </footer>
+
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden"><defs>
+    <linearGradient id="svcGradWarm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ED173D"/><stop offset="0.52" stop-color="#F49173"/><stop offset="1" stop-color="#F1B528"/>
+    </linearGradient>
+    <linearGradient id="svcGradCool" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17425B"/><stop offset="0.58" stop-color="#86D16C"/><stop offset="1" stop-color="#CDE646"/>
+    </linearGradient>
+  </defs></svg>
+
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#231F20"/>
+      <g stroke="#FFFFFF" stroke-width="1.4" fill="none" opacity="0.9">
+        <circle cx="34" cy="34" r="9"/><circle cx="66" cy="34" r="9"/>
+        <circle cx="34" cy="66" r="9"/><circle cx="66" cy="66" r="9"/>
+      </g>
+    </svg>
+  </template>
+
+  <script src="image-slot.js"></script>
+  <script>
+    var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
+    var bar=document.getElementById('mbar');
+    if(bar){ var os=function(){ bar.classList.toggle('condensed', window.scrollY>40); }; window.addEventListener('scroll',os,{passive:true}); os(); }
+    var pills=[].slice.call(document.querySelectorAll('.snav__pill'));
+    var accs=[].slice.call(document.querySelectorAll('.acc'));
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function syncPills(){ var openId=null; accs.forEach(function(a){ if(a.classList.contains('open')) openId=a.id; }); pills.forEach(function(p){ p.classList.toggle('active', p.dataset.target===openId); }); }
+    function applyPanel(a, animate){
+      var panel=a.querySelector('.acc__panel'), inner=a.querySelector('.acc__inner');
+      if(!panel||!inner) return;
+      var open=a.classList.contains('open');
+      if(panel._anim){ try{ panel._anim.cancel(); }catch(e){} panel._anim=null; }
+      if(reduce || animate===false || !panel.animate) return; /* CSS class drives resting state */
+      var h = inner.getBoundingClientRect().height;
+      var anim = panel.animate([{height:(open?0:h)+'px'},{height:(open?h:0)+'px'}], {duration:460, easing:'cubic-bezier(.4,0,.2,1)', overwrite:'replace'});
+      panel._anim = anim;
+      anim.onfinish = function(){ panel._anim=null; };
+    }
+    function setOpen(id, force){
+      accs.forEach(function(a){
+        var on = a.id===id ? (force ? true : !a.classList.contains('open')) : false;
+        a.classList.toggle('open', on);
+        var t=a.querySelector('.acc__card'); if(t) t.setAttribute('aria-expanded', on?'true':'false');
+        applyPanel(a);
+      });
+      syncPills();
+    }
+    /* Desktop shows all four categories side by side, permanently open — there
+       is nothing to toggle, so the accordion behaviour is skipped entirely. */
+    var ALL_OPEN = window.matchMedia('(min-width:1024px)').matches;
+    if (ALL_OPEN) {
+      accs.forEach(function(a){
+        a.classList.add('open');
+        var t=a.querySelector('.acc__card');
+        if(t){ t.setAttribute('aria-expanded','true'); t.disabled = true; }
+      });
+    } else {
+      accs.forEach(function(a){ var t=a.querySelector('.acc__card'); if(t) t.addEventListener('click',function(){ anchor(a, function(){ setOpen(a.id,false); }); }); });
+    }
+    /* Keep the clicked card visually fixed: cards above may collapse (animated),
+       which would otherwise slide the page under the user. Compensate each frame. */
+    function anchor(el, run){
+      var before = el.getBoundingClientRect().top;
+      run();
+      var t0 = performance.now();
+      (function step(now){
+        var d = el.getBoundingClientRect().top - before;
+        if (Math.abs(d) > 0.5) window.scrollTo(0, (window.pageYOffset || document.documentElement.scrollTop || 0) + d);
+        if (now - t0 < 620) requestAnimationFrame(step);
+      })(t0);
+    }
+    pills.forEach(function(p){
+      p.addEventListener('click',function(){
+        if(!ALL_OPEN) setOpen(p.dataset.target,true);
+        var t=document.getElementById(p.dataset.target);
+        if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  </script>
+  <div class="sheet" id="visitSheet" hidden>
+    <div class="sheet__backdrop" data-close></div>
+    <div class="sheet__panel" role="dialog" aria-modal="true" aria-label="Get in touch">
+      <button class="sheet__close" data-close type="button" aria-label="Close">×</button>
+      <span class="sheet__grab" aria-hidden="true"></span>
+      <h3 class="sheet__title">Get in touch</h3>
+      <p class="sheet__sub">Choose how you’d like to start.</p>
+      <div class="sheet__opts">
+        <a class="sheet__opt wa" href="https://wa.me/96170832892?text=Hi%20Grape%2C%20I%27d%20like%20to%20book%20a%20smart-home%20visit." target="_blank" rel="noopener"><span class="sheet__ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg></span><span class="sheet__meta"><b>WhatsApp Us</b><small>Fastest way to speak with our team.</small></span><span class="sheet__go" aria-hidden="true">→</span></a>
+        <a class="sheet__opt em" href="mailto:admin@grapemena.com?subject=Smart-home%20visit%20inquiry"><span class="sheet__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M3 7l9 6 9-6"/></svg></span><span class="sheet__meta"><b>Email Us</b><small>Send us your requirements or project details.</small></span><span class="sheet__go" aria-hidden="true">→</span></a>
+        <a class="sheet__opt form" href="/#consult"><span class="sheet__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H6a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/><path d="M9 4a2 2 0 0 1 2-1h2a2 2 0 0 1 2 1"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L14 13l-4 1 1-4z"/></svg></span><span class="sheet__meta"><b>Fill Inquiry Form</b><small>Share your property details and preferred services.</small></span><span class="sheet__go" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var sheet=document.getElementById('visitSheet');
+    if(!sheet) return;
+    var triggers=[].slice.call(document.querySelectorAll('[data-open-sheet]'));
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, ct, last=null;
+    var _sT=sheet.querySelector('.sheet__title'), _sS=sheet.querySelector('.sheet__sub');
+    function setSheetMode(m){ if(m==='support'){ if(_sT)_sT.textContent='How can we help?'; if(_sS)_sS.textContent='Reach our team — we’re here for you.'; } else { if(_sT)_sT.textContent='Get in touch'; if(_sS)_sS.textContent='Choose how you’d like to start.'; } }
+    window.__grapeSheetMode=setSheetMode;
+    function open(tr){ last=tr||null; clearTimeout(ct); sheet.hidden=false; if(reduce)sheet.classList.add('open'); else requestAnimationFrame(function(){requestAnimationFrame(function(){sheet.classList.add('open');});}); if(last)last.setAttribute('aria-expanded','true'); }
+    function close(){ sheet.classList.remove('open'); if(last)last.setAttribute('aria-expanded','false'); if(reduce)sheet.hidden=true; else ct=setTimeout(function(){if(!sheet.classList.contains('open'))sheet.hidden=true;},420); }
+    triggers.forEach(function(tr){ tr.addEventListener('click',function(e){ e.preventDefault(); e.stopPropagation(); setSheetMode('sales'); open(tr); }); });
+    sheet.querySelectorAll('[data-close]').forEach(function(el){ el.addEventListener('click',close); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&sheet.classList.contains('open'))close(); });
+    sheet.querySelectorAll('a.sheet__opt').forEach(function(a){ a.addEventListener('click',close); });
+  })();
+  </script>
+  <div class="navmenu" id="navMenu" hidden>
+    <div class="navmenu__backdrop" data-close></div>
+    <aside class="navmenu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="navmenu__top">
+        <a class="navmenu__logo" href="/" aria-label="Grape — home"><img class="navmenu__mark" src="assets/logo-mark.png" alt=""><img class="navmenu__word" src="assets/logo-word.png" alt="Grape"></a>
+        <button class="navmenu__close" data-close type="button" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="navmenu__links" aria-label="Site">
+        <a href="/"><span class="n">01</span><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V9.5"/></svg></span><span class="t">Home</span></a>
+        <a href="services.html"><span class="n">02</span><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg></span><span class="t">Our Solutions</span></a>
+        <a href="/#consult"><span class="n">03</span><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="1.6"/><circle cx="5" cy="12" r="1.6"/><circle cx="5" cy="18" r="1.6"/><path d="M9.5 6h10M9.5 12h10M9.5 18h10"/></svg></span><span class="t">How it works</span></a>
+        <a href="about.html" data-about><span class="n">04</span><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 7.6h0.01"/></svg></span><span class="t">About us</span></a>
+        <a href="#book" data-book><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg></span><span class="ct"><span class="t">Get in touch</span><span class="sub">For new clients</span></span></a>
+      </nav>
+      <a class="navmenu__support" href="#book" data-book><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 16 0"></path><rect x="3" y="12.5" width="4" height="7" rx="2"></rect><rect x="17" y="12.5" width="4" height="7" rx="2"></rect><path d="M20 19.5a3 3 0 0 1-3 2.5h-3"></path></svg></span><span class="ct"><span class="t">Support</span><span class="sub">For existing clients</span></span></a>
+      <div class="navmenu__foot">
+        <span class="navmenu__brand">Smart solutions tailored for all</span>
+      </div>
+    </aside>
+  </div>
+  <script>
+  (function(){
+    var btn=document.getElementById('menuBtn'), menu=document.getElementById('navMenu');
+    if(!btn||!menu) return;
+    var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, t;
+    function open(){clearTimeout(t);menu.hidden=false;if(reduce)menu.classList.add('open');else requestAnimationFrame(function(){requestAnimationFrame(function(){menu.classList.add('open');});});btn.setAttribute('aria-expanded','true');}
+    function close(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');if(reduce)menu.hidden=true;else t=setTimeout(function(){if(!menu.classList.contains('open'))menu.hidden=true;},420);}
+    btn.addEventListener('click',function(e){e.stopPropagation();open();});
+    menu.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',close);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open'))close();});
+    menu.querySelectorAll('.navmenu__links a, .navmenu__line, .navmenu__support').forEach(function(a){a.addEventListener('click',function(e){if(a.hasAttribute('data-book')){e.preventDefault();close();var support=a.classList.contains('navmenu__support');setTimeout(function(){var t=document.querySelector('[data-open-sheet]');if(t)t.click();if(support&&window.__grapeSheetMode)window.__grapeSheetMode('support');},reduce?0:320);return;}if((a.getAttribute('href')||'')==='#'){e.preventDefault();close();return;}close();});});
+  })();
+  </script>
+</body>
+</html>
